@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA & Wellness | SkyTower Hotel Batumi | Arınma & Huzur</title>
+    <meta name="description" content="SkyTower Hotel Batumi'nin huzur dolu SPA dünyasında yenilenin. Geleneksel Türk hamamı, sauna ve uzman masaj terapileri ile kendinizi şımartın.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header" class="scrolled">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">SKYTOWER<span>HOTEL</span></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Anasayfa</a></li>
+                    <li><a href="odalar.html" data-i18n="nav_rooms">Odalar</a></li>
+                    <li><a href="batum.html" data-i18n="nav_guide">Batum Rehberi</a></li>
+                    <li><a href="spa.html" class="active" data-i18n="nav_spa">SPA & Wellness</a></li>
+                    <li><a href="iletisim.html" data-i18n="nav_contact">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="lang-switcher">
+                    <button class="lang-btn" aria-label="Dil Seçimi">
+                        <i class="fas fa-globe"></i> <span class="lang-btn-text">TR</span> <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown">
+                        <div class="lang-option" data-lang="tr">Türkçe (TR)</div>
+                        <div class="lang-option" data-lang="en">English (EN)</div>
+                        <div class="lang-option" data-lang="ka">ქართული (KA)</div>
+                        <div class="lang-option" data-lang="ru">Русский (RU)</div>
+                    </div>
+                </div>
+                <div class="header-cta">
+                    <a href="tel:08500000000" class="btn btn-primary dynamic-phone" data-i18n="btn_call_now">Hemen Ara</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero hero-spa">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 data-i18n="nav_spa">SPA & Wellness</h1>
+            <p data-i18n="spa_hero_subtitle">Ruhunuzu ve bedeninizi dinlendirecek eşsiz bir arınma deneyimi.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="assets/spa.jpg" alt="SPA Merkezi">
+                </div>
+                <div class="grid-item">
+                    <h2 class="section-title" data-i18n="spa_title">Huzur Dolu Bir Arınma</h2>
+                    <p data-i18n="spa_desc">Modern SPA merkezimizde, geleneksel Türk hamamı, sauna, buhar odası ve ısıtmalı kapalı havuzumuzla günün yorgunluğunu üzerinizden atın. Uzman terapistlerimiz eşliğinde sunulan özel masajlar ile yenilenin.</p>
+                    <ul class="luxury-list mt-30">
+                        <li data-i18n="spa_item_1">Geleneksel Türk Hamamı ve Sauna</li>
+                        <li data-i18n="spa_item_2">Isıtmalı Kapalı Yüzme Havuzu</li>
+                        <li data-i18n="spa_item_3">Kişiye Özel Masaj Terapileri</li>
+                        <li data-i18n="spa_item_4">Profesyonel Cilt Bakım Seansları</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h4 data-i18n="footer_about_title">SKYTOWER HOTEL</h4>
+                    <p data-i18n="footer_about_text">Batum'un en lüks oteli olarak, misafirlerimize unutulmaz anılar biriktirmeleri için hizmet veriyoruz.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_menu_title">Hızlı Menü</h4>
+                    <ul>
+                        <li><a href="odalar.html" data-i18n="nav_rooms">Odalar</a></li>
+                        <li><a href="batum.html" data-i18n="nav_guide">Batum Rehberi</a></li>
+                        <li><a href="spa.html" data-i18n="nav_spa">SPA</a></li>
+                        <li><a href="iletisim.html" data-i18n="nav_contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer_contact_title">Bize Ulaşın</h4>
+                    <p data-i18n="address_text">Sherif Khimshiashvili St 15a, Batumi</p>
+                    <p class="dynamic-phone">0850 000 00 00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SkyTower Hotel Batumi. <span data-i18n="footer_rights">Tüm Hakları Saklıdır.</span> | <a href="#" data-i18n="privacy_policy">Gizlilik Politikası</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
