@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skytowerbatumi.com/sitemap.xml

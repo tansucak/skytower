@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyTower Hotel Batumi | Lüks Otel | Rezervasyon</title>
+    <meta name="description" content="SkyTower Hotel Batumi ile Batum'un kalbinde 5 yıldızlı lüks konaklama ve SPA deneyimi. Türkiye'ye özel fiyatlarla hemen yerinizi ayırtın.">
+    <meta name="keywords" content="SkyTower Hotel Batumi, Batum otel rezervasyon, Batum lüks otel, Batum SPA, Karadeniz manzaralı otel">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skytowerbatumi.com/">
+    <meta property="og:title" content="SkyTower Hotel Batumi | Lüks Otel">
+    <meta property="og:description" content="Batum'un en lüks 5 yıldızlı otelinde unutulmaz bir konaklama deneyimi.">
+    <meta property="og:image" content="assets/exterior.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="SkyTower Hotel Batumi | Lüks Otel">
+    <meta property="twitter:description" content="Batum'un kalbinde lüksün adresi.">
+    <meta property="twitter:image" content="assets/exterior.jpg">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">SKYTOWER<span>HOTEL</span></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Anasayfa</a></li>
+                    <li><a href="odalar.html" data-i18n="nav_rooms">Odalar</a></li>
+                    <li><a href="batum.html" data-i18n="nav_guide">Batum Rehberi</a></li>
+                    <li><a href="spa.html" data-i18n="nav_spa">SPA & Wellness</a></li>
+                    <li><a href="iletisim.html" data-i18n="nav_contact">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="lang-switcher">
+                    <button class="lang-btn" aria-label="Dil Seçimi">
+                        <i class="fas fa-globe"></i> <span class="lang-btn-text">TR</span> <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown">
+                        <div class="lang-option" data-lang="tr">Türkçe (TR)</div>
+                        <div class="lang-option" data-lang="en">English (EN)</div>
+                        <div class="lang-option" data-lang="ka">ქართული (KA)</div>
+                        <div class="lang-option" data-lang="ru">Русский (RU)</div>
+                    </div>
+                </div>
+                <div class="header-cta">
+                    <a href="tel:08500000000" class="btn btn-primary dynamic-phone" data-i18n="btn_call_now">Hemen Ara</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 data-i18n="hero_title">Batumi'nin En Seçkin 5 Yıldızlı Deneyimi</h1>
+            <p data-i18n="hero_subtitle">Lüksün ve konforun Karadeniz ile buluştuğu noktada, unutulmaz bir konaklama için yerinizi ayırtın.</p>
+        </div>
+
+        <!-- Booking Widget -->
+        <div class="booking-widget-wrapper">
+            <div class="widget-promo">
+                <span class="promo-tag"><i class="fas fa-calendar-check"></i> <span data-i18n="promo_book_now">Şimdi Ayırt, Girişte Öde</span></span>
+                <span class="promo-tag"><i class="fas fa-shield-alt"></i> <span data-i18n="promo_best_price">En İyi Fiyat Garantisi</span></span>
+            </div>
+            <div class="booking-widget">
+            <div class="widget-item">
+                <label for="check-in" data-i18n="label_check_in">Giriş Tarihi</label>
+                <input type="date" id="check-in" title="Giriş Tarihi" value="2024-05-01">
+            </div>
+            <div class="widget-item">
+                <label for="check-out" data-i18n="label_check_out">Çıkış Tarihi</label>
+                <input type="date" id="check-out" title="Çıkış Tarihi" value="2024-05-05">
+            </div>
+            <div class="widget-item">
+                <label for="adults" data-i18n="label_adults">Yetişkin</label>
+                <select id="adults" title="Yetişkin Sayısı">
+                    <option data-i18n="adult_count_1">1 Yetişkin</option>
+                    <option selected data-i18n="adult_count_2">2 Yetişkin</option>
+                    <option data-i18n="adult_count_3">3 Yetişkin</option>
+                </select>
+            </div>
+            <div class="widget-item">
+                <label for="children" data-i18n="label_children">Çocuk</label>
+                <select id="children" title="Çocuk Sayısı">
+                    <option data-i18n="child_count_0">0 Çocuk</option>
+                    <option data-i18n="child_count_1">1 Çocuk</option>
+                    <option data-i18n="child_count_2">2 Çocuk</option>
+                </select>
+            </div>
+            <div class="widget-item widget-btn-wrapper">
+                <button class="btn btn-gold btn-full-height" data-i18n="btn_check_availability">Müsaitlik Kontrol Et</button>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Factors Bar -->
+    <section id="trust-bar">
+        <div class="container">
+            <div class="trust-item">
+                <i class="fas fa-headset"></i>
+                <span data-i18n="trust_support">%100 Türkçe Destek</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-shield-alt"></i>
+                <span data-i18n="trust_payment">Güvenli Ödeme</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-bolt"></i>
+                <span data-i18n="trust_confirm">Hızlı Rezervasyon Onayı</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-lira-sign"></i>
+                <span data-i18n="trust_price">En İyi Fiyat Garantisi</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="odalar" class="section">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="nav_rooms">Odalar</h2>
+            <p class="text-center section-subtitle" data-i18n="hero_subtitle">Her detayı konforunuz için tasarlanmış lüks odalarımızda kendinizi evinizde hissedin.</p>
+            
+            <div class="room-grid">
+                <!-- Standard Room -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="assets/standard.jpg" alt="Standard Oda">
+                        <span class="room-badge" data-i18n="badge_popular">Popüler</span>
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="room_standard_title">Standard Deniz Manzaralı</h3>
+                        <div class="room-specs">
+                            <span><i class="fas fa-expand"></i> 35 m²</span>
+                            <span><i class="fas fa-user-friends"></i> <span data-i18n="adult_count_2">2 Yetişkin</span></span>
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                        </div>
+                        <div class="room-price">
+                            <div class="price-tag">₺2.450 <span data-i18n="per_night">/ gecelik</span></div>
+                            <button class="btn btn-gold btn-sm btn-details" data-room="standard" data-i18n="room_details">Detaylar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suite Room -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="assets/suite.jpg" alt="Suite Oda">
+                        <span class="room-badge" data-i18n="badge_luxury">Luxury</span>
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="room_suite_title">Executive Suite</h3>
+                        <div class="room-specs">
+                            <span><i class="fas fa-expand"></i> 65 m²</span>
+                            <span><i class="fas fa-user-friends"></i> <span data-i18n="adult_count_3">3 Yetişkin</span></span>
+                            <span><i class="fas fa-bed"></i> Super King</span>
+                        </div>
+                        <div class="room-price">
+                            <div class="price-tag">₺4.800 <span data-i18n="per_night">/ gecelik</span></div>
+                            <button class="btn btn-gold btn-sm btn-details" data-room="suite" data-i18n="room_details">Detaylar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Presidential Suite -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="assets/presidential.jpg" alt="Presidential Suite">
+                        <span class="room-badge" data-i18n="badge_exclusive">Exclusive</span>
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="room_presidential_title">Presidential Suite</h3>
+                        <div class="room-specs">
+                            <span><i class="fas fa-expand"></i> 120 m²</span>
+                            <span><i class="fas fa-user-friends"></i> <span data-i18n="adult_count_4">4 Yetişkin</span></span>
+                            <span><i class="fas fa-bed"></i> 2 King Bed</span>
+                        </div>
+                        <div class="room-price">
+                            <div class="price-tag">₺12.500 <span data-i18n="per_night">/ gecelik</span></div>
+                            <button class="btn btn-gold btn-sm btn-details" data-room="presidential" data-i18n="room_details">Detaylar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPA Section -->
+    <section id="spa" class="section">
+        <div class="container">
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="assets/spa.jpg" alt="SkyTower SPA & Wellness">
+                </div>
+                <div class="grid-item">
+                    <h2 class="section-title" data-i18n="spa_title">Ruhunuzu ve Bedeninizi Şımartın</h2>
+                    <p data-i18n="spa_desc">Modern SPA merkezimizde, geleneksel Türk hamamından uzak doğu masajlarına kadar geniş bir yelpazede hizmet sunuyoruz.</p>
+                    <ul class="luxury-list">
+                        <li data-i18n="spa_item_1">Geleneksel Türk Hamamı ve Sauna</li>
+                        <li data-i18n="spa_item_2">Isıtmalı Kapalı Yüzme Havuzu</li>
+                        <li data-i18n="spa_item_3">Kişiye Özel Masaj Terapileri</li>
+                        <li data-i18n="spa_item_4">Profesyonel Cilt Bakım Seansları</li>
+                    </ul>
+                    <a href="#iletisim" class="btn btn-outline btn-mt" data-i18n="nav_contact">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Call Center Section -->
+    <section id="iletisim" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title" data-i18n="contact_center_title">Türkiye Özel Çağrı Merkezi ile Güvenli Rezervasyon</h2>
+            <h3 data-i18n="contact_center_subtitle">%100 Türkçe Destek ve Hızlı Çözüm</h3>
+            <p data-i18n="hero_subtitle">Batum seyahatinizi planlamak artık çok kolay. Yerel çağrı merkezimizi arayarak size özel fiyatlardan yararlanabilir, tüm sorularınıza anında yanıt bulabilirsiniz.</p>
+            <div class="contact-box">
+                <div class="phone-number">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:08500000000" class="dynamic-phone">0850 000 00 00</a>
+                </div>
+                <p data-i18n="trust_support">Ücretsiz Danışmanlık ve Rezervasyon Hattı</p>
+                <a href="https://wa.me/905000000000" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> <span data-i18n="whatsapp_text">WhatsApp'tan Yazın</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h4 data-i18n="footer_about_title">SKYTOWER HOTEL</h4>
+                    <p data-i18n="footer_about_text">Batum'un en lüks oteli olarak, misafirlerimize unutulmaz anılar biriktirmeleri için hizmet veriyoruz.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_menu_title">Hızlı Menü</h4>
+                    <ul>
+                        <li><a href="odalar.html" data-i18n="nav_rooms">Odalar</a></li>
+                        <li><a href="batum.html" data-i18n="nav_guide">Batum Rehberi</a></li>
+                        <li><a href="spa.html" data-i18n="nav_spa">SPA</a></li>
+                        <li><a href="iletisim.html" data-i18n="nav_contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer_contact_title">Bize Ulaşın</h4>
+                    <p data-i18n="address_text">Sherif Khimshiashvili St 15a, Batumi</p>
+                    <p class="dynamic-phone">0850 000 00 00</p>
+                </div>
+            </div>
+            <div class="footer-payments">
+                <h4 data-i18n="trust_payment">Ödeme Sistemleri</h4>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-amex" title="American Express"></i>
+                    <i class="fab fa-cc-discover" title="Discover"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fas fa-credit-card" title="Troy"></i>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SkyTower Hotel Batumi. <span data-i18n="footer_rights">Tüm Hakları Saklıdır.</span> | <a href="#" data-i18n="privacy_policy">Gizlilik Politikası</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Mobile CTA -->
+    <div class="mobile-cta">
+        <a href="tel:08500000000" class="btn btn-gold btn-full dynamic-phone"><i class="fas fa-phone-alt"></i> Hemen Rezervasyon Yap</a>
+    </div>
+
+    <!-- Room Details Modal -->
+    <div id="roomModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+                <!-- Content will be injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
