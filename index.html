@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyTower Hotel Batumi</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; frame-ancestors 'none';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        .redirect-container { padding: 20px; }
+    </style>
+    <script type="text/javascript">
+        // Get browser language
+        var userLang = navigator.language || navigator.userLanguage; 
+        userLang = userLang.toLowerCase();
+
+        // Redirect logic
+        if (userLang.indexOf('ru') !== -1) {
+            window.location.href = "./ru/index.html";
+        } else if (userLang.indexOf('ka') !== -1 || userLang.indexOf('ge') !== -1) {
+            window.location.href = "./ka/index.html";
+        } else if (userLang.indexOf('tr') !== -1) {
+            window.location.href = "./tr/index.html";
+        } else {
+            // Default to English for all other languages
+            window.location.href = "./en/index.html";
+        }
+    </script>
+    <link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/index.html" />
+    <link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/index.html" />
+    <link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/index.html" />
+    <link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://skytowerbatumi.com/en/index.html" />
+
+    <!-- Fallback meta refresh (anında yönlendirme) -->
+    <meta http-equiv="refresh" content="0; url=./en/index.html">
+</head>
+<body>
+    <div class="redirect-container">
+        <h2>Redirecting to SkyTower Hotel Batumi...</h2>
+        <p>Please wait while we take you to the correct language version.</p>
+        <p>If you are not redirected, <a href="./en/index.html">click here</a>.</p>
+    </div>
+</body>
+</html>

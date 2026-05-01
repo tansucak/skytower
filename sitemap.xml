@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://skytowerbatumi.com/tr/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skytowerbatumi.com/en/index.html"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skytowerbatumi.com/en/index.html"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ru/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skytowerbatumi.com/en/index.html"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ka/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skytowerbatumi.com/en/index.html"/>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Rooms -->
+  <url>
+    <loc>https://skytowerbatumi.com/tr/odalar.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/odalar.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/en/odalar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/odalar.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ru/odalar.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/odalar.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ka/odalar.html</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/odalar.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/odalar.html"/>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Fitness Centre -->
+  <url>
+    <loc>https://skytowerbatumi.com/tr/fitness.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/fitness.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/en/fitness.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/fitness.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ru/fitness.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/fitness.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ka/fitness.html</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/fitness.html"/>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Restaurant -->
+  <url>
+    <loc>https://skytowerbatumi.com/tr/restaurant.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/restaurant.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/en/restaurant.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/restaurant.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ru/restaurant.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/restaurant.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ka/restaurant.html</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/restaurant.html"/>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Batumi Guide -->
+  <url>
+    <loc>https://skytowerbatumi.com/tr/batum.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/batum.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/en/batum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/batum.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ru/batum.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/batum.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ka/batum.html</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/batum.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/batum.html"/>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://skytowerbatumi.com/tr/iletisim.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/iletisim.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/en/iletisim.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/iletisim.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ru/iletisim.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/iletisim.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skytowerbatumi.com/ka/iletisim.html</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/iletisim.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/iletisim.html"/>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
