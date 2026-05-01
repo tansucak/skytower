@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyTower Hotel Batumi | 5 Yıldızlı Lüks & Konfor</title>
-    <meta name="description"  content="SkyTower Hotel Batumi'de Karadeniz'in büyüleyici manzarası eşliğinde 5 yıldızlı lüks konaklama. Hemen yerinizi ayırtın.">
+    <title>Lüks Odalar ve Süitler | SkyTower Hotel Batumi</title>
+    <meta name="description"  content="Deniz manzaralı geniş odalarımızda konforun tadını çıkarın. Executive ve Presidential süitlerimizi keşfedin.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +16,12 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-        <link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/index.html" />
-    <link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/index.html" />
-    <link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/index.html" />
-    <link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/index.html" />
-    <link rel="alternate" hreflang="x-default" href="https://skytowerbatumi.com/en/index.html" />
-    <link rel="canonical" href="https://skytowerbatumi.com/tr/index.html" />
+        <link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/odalar.html" />
+    <link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/odalar.html" />
+    <link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/odalar.html" />
+    <link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/odalar.html" />
+    <link rel="alternate" hreflang="x-default" href="https://skytowerbatumi.com/en/odalar.html" />
+    <link rel="canonical" href="https://skytowerbatumi.com/tr/odalar.html" />
 
     <script type="application/ld+json">
     {
@@ -49,12 +49,12 @@
     <header id="main-header">
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img loading="lazy" src="../assets/logo.png"  alt="SkyTower Hotel Batumi Logo"></a>
+                <a href="index.html"><img loading="lazy" src="../assets/logo.png" alt="SkyTower Hotel Logo"></a>
             </div>
             <nav id="nav-menu">
                 <ul>
-                    <li><a href="index.html" class="active">Anasayfa</a></li>
-                    <li><a href="odalar.html">Odalar</a></li>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="odalar.html" class="active">Odalar</a></li>
                     <li><a href="batum.html">Batum Rehberi</a></li>
                     <li><a href="fitness.html">Fitness Merkezi</a></li>
                     <li><a href="restaurant.html">Restoran</a></li>
@@ -70,10 +70,10 @@
                         <i class="fas fa-globe"></i> <span class="lang-btn-text">TR</span> <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="lang-dropdown">
-                        <a href="../tr/index.html" class="lang-option">Türkçe (TR)</a>
-                        <a href="../en/index.html" class="lang-option">English (EN)</a>
-                        <a href="../ka/index.html" class="lang-option">ქართული (KA)</a>
-                        <a href="../ru/index.html" class="lang-option">Русский (RU)</a>
+                        <a href="../tr/odalar.html" class="lang-option">Türkçe (TR)</a>
+                        <a href="../en/odalar.html" class="lang-option">English (EN)</a>
+                        <a href="../ka/odalar.html" class="lang-option">ქართული (KA)</a>
+                        <a href="../ru/odalar.html" class="lang-option">Русский (RU)</a>
                     </div>
                 </div>
                 <div class="header-cta">
@@ -83,69 +83,19 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Header -->
+    <section class="page-hero hero-rooms">
         <div class="hero-overlay"></div>
-        <div class="hero-slider">
-            <div class="slide active"></div>
-        </div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1>Gökyüzüyle Buluşan Lüks: Batum'un Kalbinde Eşsiz Bir Deneyim</h1>
-                <p>Lüksün ve konforun Karadeniz ile buluştuğu noktada, unutulmaz bir konaklama için yerinizi ayırtın.</p>
-                <div class="hero-btns">
-                    <a href="odalar.html" class="btn btn-gold">Odalar</a>
-                    <a href="tel:08500000000" class="btn btn-outline dynamic-phone">Hemen Ara</a>
-                </div>
-            </div>
-            
-            <div class="hero-promo-box">
-                <div class="promo-header">
-                    <h3>Rezervasyonunu Yap, Girişte Öde!</h3>
-                </div>
-                <div class="promo-features">
-                    <ul>
-                        <li><i class="fas fa-headset"></i> <span>%100 Türkçe Destek</span></li>
-                        <li><i class="fas fa-shield-alt"></i> <span>Güvenli Ödeme</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span>Hızlı Rezervasyon Onayı</span></li>
-                        <li><i class="fas fa-tags"></i> <span>En İyi Fiyat Garantisi</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
+        <div class="container">
+            <h1>Odalar</h1>
+            <p>Lüksün ve konforun Karadeniz ile buluştuğu noktada, unutulmaz bir konaklama için yerinizi ayırtın.</p>
         </div>
     </section>
 
-    <!-- Welcome Section -->
+    <!-- Rooms List Section -->
     <section class="section">
         <div class="container">
-            <div class="grid">
-                <div class="grid-item">
-                    <h2 class="section-title">SKYTOWER HOTEL</h2>
-                    <p>Batum'un en lüks oteli olarak, misafirlerimize unutulmaz anılar biriktirmeleri için hizmet veriyoruz.</p>
-                    <a href="iletisim.html" class="btn btn-primary btn-mt">İletişim</a>
-                </div>
-                <div class="grid-item">
-                    <div class="image-stack welcome-slider">
-                        <div class="slide active"></div>
-                        <div class="slide"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rooms Section -->
-    <section id="odalar" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Odalar</h2>
-            <p class="text-center section-subtitle">Lüksün ve konforun Karadeniz ile buluştuğu noktada, unutulmaz bir konaklama için yerinizi ayırtın.</p>
-            
-            <div class="room-slider-wrapper">
-                <button class="slider-btn room-prev" aria-label="Önceki Oda"><i class="fas fa-chevron-left"></i></button>
-                <div class="room-grid room-slider">
+            <div class="room-grid">
                 <!-- Twin Room with Sea View -->
                 <div class="room-card">
                     <div class="room-image">
@@ -343,47 +293,6 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                <button class="slider-btn room-next" aria-label="Sonraki Oda"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fitness Section -->
-    <section id="fitness-home" class="section">
-        <div class="container">
-            <div class="grid">
-                <div class="grid-item">
-                    <img loading="lazy" src="../assets/fitness_centre/page_66297027bff3b.webp" alt="SkyTower Fitness Centre">
-                </div>
-                <div class="grid-item">
-                    <h2 class="section-title">Fitness Merkezi</h2>
-                    <p>Fitness Merkezimiz, günlük egzersiz rutininizi sürdürmek için ihtiyacınız olan tüm ekipmanlara sahiptir. Koşu bantları, ağırlık ekipmanları ve diğer fitness aletleri ile donatılmıştır. Fitness Merkezimiz sağlıklı yaşam tarzınızı korumanıza yardımcı olur.</p>
-                    <ul class="luxury-list">
-                        <li>Profesyonel Koşu Bantları</li>
-                        <li>Ağırlık Ekipmanları</li>
-                        <li>Pilates Ürünleri</li>
-                        <li>Bisiklet Stüdyosu</li>
-                    </ul>
-                    <a href="fitness.html" class="btn btn-outline btn-mt">Detaylar</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Local Call Center Section -->
-    <section id="iletisim" class="section bg-light">
-        <div class="container text-center">
-            <h2 class="section-title">Türkiye Özel Çağrı Merkezi ile Güvenli Rezervasyon</h2>
-            <h3>%100 Türkçe Destek ve Hızlı Çözüm</h3>
-            <p>Lüksün ve konforun Karadeniz ile buluştuğu noktada, unutulmaz bir konaklama için yerinizi ayırtın.</p>
-            <div class="contact-box">
-                <div class="phone-number">
-                    <i class="fas fa-phone-alt"></i>
-                    <a href="tel:08500000000" class="dynamic-phone">0850 000 00 00</a>
-                </div>
-                <p>%100 Türkçe Destek</p>
-                <a href="https://wa.me/905000000000" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> <span>WhatsApp'tan Yazın</span></a>
             </div>
         </div>
     </section>
@@ -399,7 +308,7 @@
                 <div class="footer-links">
                     <h4>Hızlı Menü</h4>
                     <ul>
-                        <li><a href="odalar.html">Odalar</a></li>
+                        <li><a href="odalar.html" class="active">Odalar</a></li>
                         <li><a href="batum.html">Batum Rehberi</a></li>
                         <li><a href="fitness.html">Fitness Merkezi</a></li>
                         <li><a href="restaurant.html">Restoran</a></li>
@@ -415,7 +324,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2024 SkyTower Hotel Batumi. <span> Tüm Hakları Saklıdır.</span> | <a href="#">Gizlilik Politikası</a></p>
                 <p class="footer-credits">
-                    <span>Tasarım ve Geliştirme</span>: <strong>Tansu Cak</strong> | <a href="mailto:tansucak@gmail.com">tansucak@gmail.com</a>
+                    <span>Tasarım ve Geliştirme</span>: <strong>Tansu Cak</strong> | tansucak@gmail.com
                 </p>
             </div>
         </div>

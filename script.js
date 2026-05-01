@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Booking and Support</title>
-    <meta name="description"  content="Get in touch with SkyTower Hotel Batumi. Secure booking and 24/7 support.">
+    <title>Restaurant | Unique Flavors</title>
+    <meta name="description"  content="An unforgettable dining experience with selected flavors from world cuisine and Black Sea view.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +16,12 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-        <link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/iletisim.html" />
-    <link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/iletisim.html" />
-    <link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/iletisim.html" />
-    <link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/iletisim.html" />
-    <link rel="alternate" hreflang="x-default" href="https://skytowerbatumi.com/en/iletisim.html" />
-    <link rel="canonical" href="https://skytowerbatumi.com/en/iletisim.html" />
+        <link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/restaurant.html" />
+    <link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/restaurant.html" />
+    <link rel="alternate" hreflang="ru" href="https://skytowerbatumi.com/ru/restaurant.html" />
+    <link rel="alternate" hreflang="ka" href="https://skytowerbatumi.com/ka/restaurant.html" />
+    <link rel="alternate" hreflang="x-default" href="https://skytowerbatumi.com/en/restaurant.html" />
+    <link rel="canonical" href="https://skytowerbatumi.com/en/restaurant.html" />
 
     <script type="application/ld+json">
     {
@@ -57,8 +57,8 @@
                     <li><a href="odalar.html">Rooms</a></li>
                     <li><a href="batum.html">Batumi Guide</a></li>
                     <li><a href="fitness.html">Fitness Centre</a></li>
-                    <li><a href="restaurant.html">Restaurant</a></li>
-                    <li><a href="iletisim.html" class="active">Contact</a></li>
+                    <li><a href="restaurant.html" class="active">Restaurant</a></li>
+                    <li><a href="iletisim.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-right">
@@ -70,10 +70,10 @@
                         <i class="fas fa-globe"></i> <span class="lang-btn-text">EN</span> <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="lang-dropdown">
-                        <a href="../tr/iletisim.html" class="lang-option">Türkçe (TR)</a>
-                        <a href="../en/iletisim.html" class="lang-option">English (EN)</a>
-                        <a href="../ka/iletisim.html" class="lang-option">ქართული (KA)</a>
-                        <a href="../ru/iletisim.html" class="lang-option">Русский (RU)</a>
+                        <a href="../tr/restaurant.html" class="lang-option">Türkçe (TR)</a>
+                        <a href="../en/restaurant.html" class="lang-option">English (EN)</a>
+                        <a href="../ka/restaurant.html" class="lang-option">ქართული (KA)</a>
+                        <a href="../ru/restaurant.html" class="lang-option">Русский (RU)</a>
                     </div>
                 </div>
                 <div class="header-cta">
@@ -84,11 +84,11 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-hero hero-contact">
+    <section class="page-hero hero-restaurant">
         <div class="hero-overlay"></div>
         <div class="container">
-            <h1>Contact</h1>
-            <p>We would be happy to help you.</p>
+            <h1>Restaurant</h1>
+            <p>Enjoy a delicious dining experience with open buffet options at Sky Tower Batumi's restaurant. Embark on a delicious journey through the world of gastronomy with a variety of dishes prepared by our master chefs and exclusive drinks.</p>
         </div>
     </section>
 
@@ -96,55 +96,21 @@
         <div class="container">
             <div class="grid">
                 <div class="grid-item">
-                    <h2 class="section-title">Contact Us</h2>
-                    <div class="contact-info-list mt-30">
-                        <div class="contact-info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h3>Address</h3>
-                                <p>Sherif Khimshiashvili St 15a, Batumi, Georgia</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <h3>Contact</h3>
-                                <p><a href="tel:+995500000000" class="dynamic-phone">+995 500 000 000</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h3>Email</h3>
-                                <p><a href="mailto:info@skytowerbatumi.com">info@skytowerbatumi.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <i class="fab fa-whatsapp color-whatsapp"></i>
-                            <div>
-                                <h3>WhatsApp</h3>
-                                <p><a href="https://wa.me/995500000000">+995 500 000 000</a></p>
-                            </div>
-                        </div>
-                    </div>
+                    <h2 class="section-title">A Delicious Journey through the World of Gastronomy</h2>
+                    <p>Enjoy a delicious dining experience with open buffet options at Sky Tower Batumi's restaurant. Embark on a delicious journey through the world of gastronomy with a variety of dishes prepared by our master chefs and exclusive drinks.</p>
                 </div>
                 <div class="grid-item">
-                    <div class="contact-form">
-                        <h3>Your Message</h3>
-                        <form>
-                            <div class="form-group">
-                                <input type="text"  placeholder="Your Full Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email"  placeholder="Your Email Address">
-                            </div>
-                            <div class="form-group">
-                                <textarea placeholder="Mesajınız" rows="5">Your Message</textarea>
-                            </div>
-                            <button type="submit" class="btn btn-gold btn-full">Send</button>
-                        </form>
+                    <div class="image-gallery">
+                        <img loading="lazy" src="../assets/restaurant/page_66296ee9c83df.webp" alt="Restaurant" class="w-100 br-10 mb-20">
                     </div>
                 </div>
+            </div>
+            
+            <div class="grid mt-50 grid-responsive">
+                <img loading="lazy" src="../assets/restaurant/page_66296ee9f050d.webp" alt="Food" class="w-100 br-10">
+                <img loading="lazy" src="../assets/restaurant/page_66296eea1605a.webp" alt="Food" class="w-100 br-10">
+                <img loading="lazy" src="../assets/restaurant/page_66296eea3181f.webp" alt="Dining" class="w-100 br-10">
+                <img loading="lazy" src="../assets/restaurant/page_66296eea4cc98.webp" alt="Dining" class="w-100 br-10">
             </div>
         </div>
     </section>
@@ -163,8 +129,8 @@
                         <li><a href="odalar.html">Rooms</a></li>
                         <li><a href="batum.html">Batumi Guide</a></li>
                         <li><a href="fitness.html">Fitness Centre</a></li>
-                        <li><a href="restaurant.html">Restaurant</a></li>
-                        <li><a href="iletisim.html" class="active">Contact</a></li>
+                        <li><a href="restaurant.html" class="active">Restaurant</a></li>
+                        <li><a href="iletisim.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
