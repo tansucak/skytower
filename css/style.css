@@ -1262,7 +1262,8 @@ footer {
     }
     
     .hero-content h1 {
-        font-size: clamp(1.8rem, 10vw, 2.2rem);
+        font-size: clamp(1.4rem, 8vw, 1.8rem);
+        line-height: 1.2;
     }
     
     .booking-widget {
@@ -1278,11 +1279,13 @@ footer {
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
     }
     
     .phone-number {
-        font-size: 2rem;
+        font-size: 1.4rem;
+        word-break: break-all;
     }
     
     .mobile-cta {
