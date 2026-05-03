@@ -13,7 +13,8 @@ const translations = {
         trust_payment: "Güvenli Ödeme",
         trust_confirm: "Hızlı Rezervasyon Onayı",
         trust_price: "En İyi Fiyat Garantisi",
-        phone_number: "+995 500 000 000",
+        phone_number: "+995 555 70 94 53",
+        email: "skytowerhotelbatum@gmail.com",
         whatsapp_text: "WhatsApp'tan Yazın",
         footer_about_title: "SKY TOWER HOTEL",
         footer_about_text: "Batum'un en lüks oteli olarak, misafirlerimize unutulmaz anılar biriktirmeleri için hizmet veriyoruz.",
@@ -114,7 +115,9 @@ const translations = {
         archaeological: "Batum Arkeoloji Müzesi", archaeological_desc: "Bölgenin antik tarihine ışık tutan müze, Tunç Çağı'ndan kalma eserler ve nadide koleksiyonlara ev sahipliği yapar.",
         alphabet_desc: "130 metre yüksekliğindeki bu kule, Gürcü alfabesinin eşsiz karakterlerini ve DNA sarmalını andıran mimarisiyle modern Batum'un simgelerinden biridir.",
         lighthouse_desc: "1882 yılında inşa edilen bu tarihi fener, liman bölgesinde yer alır ve şehrin denizcilik geçmişine tanıklık eder.",
-        fitness_amenities: "Olanaklar", fitness_item_1: "Müzik Sistemi", fitness_item_2: "Profesyonel Koşu Bantları", fitness_item_3: "Ağırlık Plakaları", fitness_item_4: "Esnetme Ürünleri", fitness_item_5: "Barlar", fitness_item_6: "Pilates Ürünleri", fitness_collective: "Kolektif Alanlar", fitness_collective_1: "Giyinme Odası", fitness_collective_2: "Bisiklet Stüdyosu"
+        fitness_amenities: "Olanaklar", fitness_item_1: "Müzik Sistemi", fitness_item_2: "Profesyonel Koşu Bantları", fitness_item_3: "Ağırlık Plakaları", fitness_item_4: "Esnetme Ürünleri", fitness_item_5: "Barlar", fitness_item_6: "Pilates Ürünleri", fitness_collective: "Kolektif Alanlar", fitness_collective_1: "Giyinme Odası", fitness_collective_2: "Bisiklet Stüdyosu",
+        dancing_fountains: "Su Gösterileri",
+        dancing_fountains_desc: "Batum Bulvarı'nda yer alan bu fıskiyeler, akşam saatlerinde müzik ve ışık eşliğinde büyüleyici bir dans sunar."
     },
     en: {
         nav_home: "Home",
@@ -130,7 +133,8 @@ const translations = {
         trust_payment: "Secure Payment",
         trust_confirm: "Fast Booking Confirmation",
         trust_price: "Best Price Guarantee",
-        phone_number: "+995 500 000 000",
+        phone_number: "+995 577 03 00 44",
+        email: "reservation@metroskytower.com",
         whatsapp_text: "Contact on WhatsApp",
         footer_about_title: "SKY TOWER HOTEL",
         footer_about_text: "As the most luxurious hotel in Batumi, we serve our guests to collect unforgettable memories.",
@@ -248,7 +252,8 @@ const translations = {
         trust_payment: "უსაფრთხო გადახდა",
         trust_confirm: "ჯავშნის სწრაფი დადასტურება",
         trust_price: "საუკეთესო ფასის გარანტია",
-        phone_number: "+995 500 000 000",
+        phone_number: "+995 577 03 00 44",
+        email: "reservation@metroskytower.com",
         whatsapp_text: "მოგვწერეთ WhatsApp-ში",
         footer_about_title: "SKY TOWER HOTEL",
         footer_about_text: "როგორც ბათუმის ყველაზე მდიდრული სასტუმრო, ჩვენ ვზრუნავთ სტუმრების დაუვიწყარ მოგონებებზე.",
@@ -366,7 +371,8 @@ const translations = {
         trust_payment: "Безопасная оплата",
         trust_confirm: "Быстрое подтверждение",
         trust_price: "Гарантия лучшей цены",
-        phone_number: "+995 500 111 222",
+        phone_number: "+995 577 03 00 44",
+        email: "reservation@metroskytower.com",
         whatsapp_text: "Написать в WhatsApp",
         footer_about_title: "SKY TOWER HOTEL",
         footer_about_text: "Как самый роскошный отель в Батуми, мы дарим нашим гостям незабываемые воспоминания.",
@@ -465,6 +471,8 @@ const translations = {
         alphabet_desc: "Эта 130-метровая башня со спиралью из букв грузинского алфавита, напоминающей ДНК, является одним из символов современного Батуми.",
         lighthouse_desc: "Этот исторический маяк, построенный в 1882 году, расположен в порту и является свидетелем морского прошлого города.",
         promo_book_pay: "Бронируй сейчас, плати при заезде!",
-        fitness_amenities: "Удобства", fitness_item_1: "Музыкальная система", fitness_item_2: "Профессиональные беговые дорожки", fitness_item_3: "Весовые пластины", fitness_item_4: "Продукты для растяжки", fitness_item_5: "Штанги", fitness_item_6: "Оборудование для пилатеса", fitness_collective: "Коллективные зоны", fitness_collective_1: "Раздевалка", fitness_collective_2: "Сайкл-студия"
+        fitness_amenities: "Удобства", fitness_item_1: "Музыкальная система", fitness_item_2: "Профессиональные беговые дорожки", fitness_item_3: "Весовые пластины", fitness_item_4: "оборудование для растяжки", fitness_item_5: "Штанги", fitness_item_6: "Оборудование для пилатеса", fitness_collective: "Коллективные зоны", fitness_collective_1: "Раздевалка", fitness_collective_2: "Сайкл-студия",
+        dancing_fountains: "Танцующие фонтаны",
+        dancing_fountains_desc: "Эти фонтаны, расположенные на Батумском бульваре, вечером устраивают захватывающий танец под музыку и свет."
     }
 };

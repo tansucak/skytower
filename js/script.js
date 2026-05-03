@@ -104,10 +104,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const langBtns = document.querySelectorAll('.lang-option');
+    const langOptions = document.querySelectorAll('.lang-option');
     const currentLang = document.documentElement.lang || 'tr';
 
-    // Update translations
+    langOptions.forEach(opt => {
+        opt.addEventListener('click', () => {
+            const targetLang = opt.getAttribute('data-lang');
+            if (targetLang === currentLang) return;
+
+            // Get current page name (e.g., index.html, batum.html)
+            const pathParts = window.location.pathname.split('/');
+            const currentPage = pathParts[pathParts.length - 1] || 'index.html';
+            
+            // Redirect to the same page in the target language folder
+            // If we are in a subfolder (tr/, en/, etc.), we go up one level then into target
+            const isSubfolder = ['tr', 'en', 'ka', 'ru'].includes(currentLang);
+            
+            let newPath = '';
+            if (isSubfolder) {
+                // Remove the last two parts (lang/page.html) and add new ones
+                pathParts.splice(-2, 2, targetLang, currentPage);
+                newPath = pathParts.join('/');
+            } else {
+                // If at root, just go to targetLang/currentPage
+                newPath = window.location.pathname.replace(currentPage, `${targetLang}/${currentPage}`);
+            }
+            
+            window.location.href = newPath;
+        });
+    });
+
+    // Update translations for any remaining data-i18n elements
     function updateContent(lang) {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
@@ -117,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initialize translations
     updateContent(currentLang);
 
     // Modal Management
