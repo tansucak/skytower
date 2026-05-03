@@ -159,6 +159,7 @@ img {
 .logo a {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .logo img {
@@ -193,14 +194,15 @@ nav ul li a {
     color: #333;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     transition: var(--transition);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     display: inline-block;
     padding-bottom: 5px !important;
     border-bottom: 2px solid transparent !important;
     line-height: 1.2 !important;
+    white-space: nowrap;
 }
 
 nav ul li a:hover,
@@ -1190,7 +1192,23 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
+    nav ul li {
+        margin: 0 8px;
+    }
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+    .lang-switcher {
+        margin-left: 10px;
+    }
+    .header-cta .btn {
+        padding: 8px 12px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1080px) {
     nav, .header-cta {
         display: none;
     }
