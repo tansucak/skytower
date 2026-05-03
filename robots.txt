@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-# Sitemaps
-Sitemap: https://skytowerbatumi.com/sitemap.xml
-
-# Disallow private areas
-Disallow: /scratch/
-Disallow: /assets/_archive/
