@@ -25,6 +25,8 @@ body {
     color: var(--text-color);
     background-color: var(--white);
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 a {
@@ -1226,7 +1228,10 @@ footer {
     }
 
     .container {
+        width: 100% !important;
+        max-width: 100% !important;
         padding: 0 20px !important;
+        margin: 0 !important;
     }
 
 
