@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11514804860"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-11514804860');
+    </script>
+    <meta charset="UTF-8">
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="../css/style.min.css" as="style">
+    <link rel="preload" href="../assets/hero_1.webp" as="image">
+    
+    
+
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator && (window.location.protocol === 'http:' || window.location.protocol === 'https:')) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed', err));
+            });
+        }
+    </script>
+    
+    <!-- Deferred CSS & Fonts -->
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css">
+    <noscript>
+        <link rel="stylesheet" href="../css/style.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css">
+    </noscript>
+    <meta name="keywords" content="batumi hotels, places to visit in batumi, batumi hotel, SKY TOWER batumi, accommodation in batumi, 5 star hotels in batumi, batumi holiday, batumi tours, batumi hotel prices, luxury hotels in batumi, sea view hotels in batumi, casino hotels in batumi, restaurants in batumi, fitness in batumi, spa in batumi, batumi city center hotels, best hotels in batumi, batumi weather, batumi guide, batumi 2024, batumi nightlife, batumi casino, ali and nino batumi, batumi boulevard, batumi boulevard, batumi botanical garden">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta_title_guide">Batumi Guide | Places to Visit & History | SKY TOWER Hotel</title>
+    <meta name="description" data-i18n="meta_desc_guide" content="Discover the historical and touristic places of Batumi. SKY TOWER guide for Ali and Nino, Botanical Garden, Piazza Square and more.">
+    <!-- Google Fonts Updated in CSS -->
+    
+    
+    <link rel="icon" type="image/webp" href="../assets/sky_logo2.webp">
+    <link rel="apple-touch-icon" href="../assets/sky_logo2.webp">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="../assets/logo.png" alt="SKY TOWER Hotel Logo"></a>
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Anasayfa</a></li>
+                    <li><a href="rooms.html" data-i18n="nav_rooms">Odalar</a></li>
+                    <li><a href="guide.html" class="active" data-i18n="nav_guide">Batum Rehberi</a></li>
+                    <li><a href="fitness.html" data-i18n="nav_fitness">Fitness Merkezi</a></li>
+                    <li><a href="restaurant.html" data-i18n="nav_restaurant">Restoran</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <button class="mobile-toggle" aria-label="Menüyü Aç">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="lang-switcher">
+                    <button class="lang-btn" aria-label="Dil Seçimi">
+                        <i class="fas fa-globe"></i> <span class="lang-btn-text">EN</span> <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown">
+                        <div class="lang-option" data-lang="tr">Türkçe (TR)</div>
+                        <div class="lang-option" data-lang="en">English (EN)</div>
+                        <div class="lang-option" data-lang="ka">ქართული (KA)</div>
+                        <div class="lang-option" data-lang="ru">Русский (RU)</div>
+                    </div>
+                </div>
+                <div class="header-cta">
+                    <a href="tel:08500000000" class="btn btn-primary dynamic-phone" data-i18n="btn_call_now">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Page Header -->
+    <section class="page-hero hero-batum">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 data-i18n="guide_title">Batumi Guide</h1>
+            <p data-i18n="guide_subtitle">Discover the Historical and Touristic Riches of Batumi, the Pearl of the Black Sea.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <div class="grid-item">
+                    <h2 class="section-title" data-i18n="guide_intro_title">Batumi: Meeting of History and Modernity</h2>
+                    <p class="mt-20" data-i18n="guide_intro_1">Batumi is the capital of the Autonomous Republic of Adjara in Georgia and one of the most popular tourism centers on the Black Sea coast. The historical texture of the old city area combines with modern skyscrapers and wide parks to offer a unique atmosphere.</p>
+                    <p class="mt-20" data-i18n="guide_intro_2">Enjoy staying in the heart of Batumi with many tourist spots located within walking distance of our hotel.</p>
+                </div>
+                <div class="grid-item">
+                    <img decoding="async" loading="lazy" src="../assets/exterior.webp" alt="Batum Şehir Manzarası" class="br-15">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Attractions Grid -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="attractions_title">Must-See Places</h2>
+            <div class="room-grid mt-50">
+                <!-- Ali and Nino -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/ali_nino.webp" alt="Ali ve Nino Heykeli">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="ali_nino">Ali and Nino Statue</h3>
+                        <p data-i18n="ali_nino_desc">Representing lovers who could not meet, this iconic steel statue offers a fascinating show by being illuminated every evening.</p>
+                    </div>
+                </div>
+                <!-- Botanical Garden -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/botanical.webp" alt="Batum Botanik Bahçesi">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="botanical">Batumi Botanical Garden</h3>
+                        <p data-i18n="botanical_desc">One of the largest and richest botanical gardens in the world, this area is home to thousands of plant species.</p>
+                    </div>
+                </div>
+                <!-- Piazza Square -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/piazza.webp" alt="Piazza Meydanı">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="piazza">Piazza Square</h3>
+                        <p data-i18n="piazza_desc">With its Italian-inspired architecture, mosaics and live music, it is one of Batumi's most pleasant meeting points.</p>
+                    </div>
+                </div>
+                <!-- Argo Cable Car -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/argo_cable.webp" alt="Argo Teleferiği">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="argo_cable">Argo Cable Car</h3>
+                        <p data-i18n="argo_cable_desc">The best way to see Batumi from a bird's eye view, this cable car offers a unique journey from the city to Anuri Mountain.</p>
+                    </div>
+                </div>
+                <!-- Gonio Fortress -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/gonio.webp" alt="Gonio Kalesi">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="gonio">Gonio Fortress</h3>
+                        <p data-i18n="gonio_desc">This ancient fortress from the Roman period is one of the most important historical structures located in the south of Batumi.</p>
+                    </div>
+                </div>
+                <!-- Miracle Park -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/miracle_park.webp" alt="Miracle Park">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="miracle_park">Miracle Park</h3>
+                        <p data-i18n="miracle_park_desc">Home to the Alphabet Tower and the Ferris Wheel, this park is a popular recreation area considered the heart of modern Batumi.</p>
+                    </div>
+                </div>
+                <!-- Central Mosque -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/central_mosque.webp" alt="Batum Orta Camii">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="central_mosque">Batumi Central Mosque</h3>
+                        <p data-i18n="central_mosque_desc">Built in the 1880s, this mosque reflects the cultural diversity of the city with its wooden decorations and colorful interior architecture.</p>
+                    </div>
+                </div>
+                <!-- Virgin Cathedral -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/virgin_cathedral.webp" alt="Meryem Ana Kilisesi">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="virgin_cathedral">Holy Mother Virgin Nativity Cathedral</h3>
+                        <p data-i18n="virgin_cathedral_desc">Drawing attention with its Gothic architecture, this cathedral was originally built as a Catholic church and today serves as an Orthodox cathedral.</p>
+                    </div>
+                </div>
+                <!-- Medea Statue -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/medea_statue.webp" alt="Medea Heykeli">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="medea_statue">Medea Statue</h3>
+                        <p data-i18n="medea_statue_desc">Rising in the center of Europe Square, this statue symbolizes the Golden Fleece legend in Greek mythology.</p>
+                    </div>
+                </div>
+                <!-- Dancing Fountains -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/dancing_fountains.webp" alt="Batum Su Gösterileri">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="dancing_fountains">Dancing Fountains</h3>
+                        <p data-i18n="dancing_fountains_desc">Located on Batumi Boulevard, these fountains offer a fascinating dance accompanied by music and light in the evening.</p>
+                    </div>
+                </div>
+                <!-- Dolphinarium -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/dolphinarium.webp" alt="Batum Dolphinarium">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="dolphinarium">Batumi Dolphinarium</h3>
+                        <p data-i18n="dolphinarium_desc">This center offers fun moments for both children and adults, where you can watch the magnificent shows of dolphins.</p>
+                    </div>
+                </div>
+                <!-- 6 May Park -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/may_park.webp" alt="6 Mayıs Parkı">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="may_park">6 May Park</h3>
+                        <p data-i18n="may_park_desc">Located in the heart of the city, this peaceful park is ideal for walking by the lake and spending time in touch with nature.</p>
+                    </div>
+                </div>
+                <!-- Alphabet Tower -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/alphabet_tower.webp" alt="Alfabe Kulesi">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="attr_alphabet">Alphabet Tower</h3>
+                        <p data-i18n="alphabet_desc">130 meters high, this tower is one of the symbols of modern Batumi with its unique characters of the Georgian alphabet and architecture resembling a DNA helix.</p>
+                    </div>
+                </div>
+                <!-- Batumi Lighthouse -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img decoding="async" loading="lazy" src="../assets/lighthouse.webp" alt="Batum Feneri">
+                    </div>
+                    <div class="room-info">
+                        <h3 data-i18n="attr_lighthouse">Batumi Lighthouse</h3>
+                        <p data-i18n="lighthouse_desc">Built in 1882, this historical lighthouse is located in the port area and witnesses the city's maritime past.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <div class="grid-item">
+                    <img decoding="async" loading="lazy" src="../assets/batumi_guide.webp" alt="Batumi Boulevard" class="br-15">
+                </div>
+                <div class="grid-item">
+                    <h2 class="section-title" data-i18n="boulevard_title">Batumi Boulevard</h2>
+                    <p data-i18n="boulevard_desc">Established in 1881 and stretching for 7 kilometers, Batumi Boulevard reflects the spirit of the city with its coastline, bicycle paths, dancing fountains and giant ferris wheel.</p>
+                    <ul class="luxury-list mt-20">
+                        <li data-i18n="attr_alphabet">Alphabet Tower</li>
+                        <li data-i18n="attr_chacha">Chacha Tower</li>
+                        <li data-i18n="attr_europe">Europe Square & Medea Statue</li>
+                        <li data-i18n="attr_lighthouse">Batumi Lighthouse</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New: Gastronomy Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="grid reverse">
+                <div class="grid-item">
+                    <h2 class="section-title" data-i18n="food_title">What to Eat in Batumi?</h2>
+                    <p class="mt-20" data-i18n="food_desc">Discover the unique flavors of Georgian cuisine. Embark on a gastronomy journey with Adjarian Khachapuri, Khinkali and world-famous Georgian wines.</p>
+                </div>
+                <div class="grid-item">
+                    <img decoding="async" loading="lazy" src="../assets/food.webp" alt="Georgian Food" class="br-15 w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New: Nightlife Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <div class="grid-item">
+                    <img decoding="async" loading="lazy" src="../assets/nightlife.webp" alt="Batumi Nightlife" class="br-15 w-100">
+                </div>
+                <div class="grid-item">
+                    <h2 class="section-title" data-i18n="nightlife_title">Batumi Nightlife</h2>
+                    <p class="mt-20" data-i18n="nightlife_desc">With its glittering casinos, exclusive beach clubs and modern rooftop bars, Batumi is known as the Las Vegas of the Black Sea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h4 data-i18n="footer_about_title">SKY TOWER HOTEL</h4>
+                    <p data-i18n="footer_about_text">As the most luxurious hotel in Batumi, we serve our guests to collect unforgettable memories.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_menu_title">Quick Menu</h4>
+                    <ul>
+                        <li><a href="rooms.html" data-i18n="nav_rooms">Odalar</a></li>
+                        <li><a href="guide.html" class="active" data-i18n="nav_guide">Batum Rehberi</a></li>
+                        <li><a href="fitness.html" data-i18n="nav_fitness">Fitness Merkezi</a></li>
+                        <li><a href="restaurant.html" data-i18n="nav_restaurant">Restoran</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer_contact_title">Contact Us</h4>
+                    <p data-i18n="address_text">Sherif Khimshiashvili St 15a, Batumi, Georgia</p>
+                    <p class="dynamic-phone">0850 000 00 00</p>
+                </div>
+            </div>
+            <div class="footer-payments">
+                <h4 data-i18n="payment_systems">Payment Systems</h4>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-amex" title="American Express"></i>
+                    <i class="fab fa-cc-discover" title="Discover"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fas fa-credit-card" title="Troy"></i>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SKY TOWER Hotel Batumi. <span data-i18n="footer_rights">All Rights Reserved.</span> | <a href="#" data-i18n="privacy_policy">Privacy Policy</a></p>
+                <p class="footer-credits">
+                    <span data-i18n="design_credits">Design and Development</span>: <strong>Tansu Cak</strong> | <a href="mailto:tansucak@gmail.com">tansucak@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/translations_en.min.js" defer></script>
+    <script src="../js/script.min.js" defer></script>
+</body>
+</html>

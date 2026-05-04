@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Turkish -->
+  <url>
+    <loc>https://skytowerhotelbatumi.com/tr/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerhotelbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerhotelbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerhotelbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerhotelbatumi.com/ka/index.html"/>
+    <lastmod>2024-05-04</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://skytowerhotelbatumi.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerhotelbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerhotelbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerhotelbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerhotelbatumi.com/ka/index.html"/>
+    <lastmod>2024-05-04</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Russian -->
+  <url>
+    <loc>https://skytowerhotelbatumi.com/ru/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerhotelbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerhotelbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerhotelbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerhotelbatumi.com/ka/index.html"/>
+    <lastmod>2024-05-04</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Georgian -->
+  <url>
+    <loc>https://skytowerhotelbatumi.com/ka/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerhotelbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerhotelbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerhotelbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerhotelbatumi.com/ka/index.html"/>
+    <lastmod>2024-05-04</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+</urlset>
