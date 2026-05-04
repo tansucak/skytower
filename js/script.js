@@ -159,9 +159,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Defer non-critical initializations to reduce long tasks
     setTimeout(() => {
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
         // Dynamic Mobile Bottom Nav
         function initBottomNav() {
-            if (window.innerWidth <= 768 && !document.querySelector('.bottom-nav')) {
+            if (isMobile && !document.querySelector('.bottom-nav')) {
                 const lang = document.documentElement.lang || 'tr';
                 const nav = document.createElement('div');
                 nav.className = 'bottom-nav';
@@ -315,6 +316,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (email) {
             document.querySelectorAll('.dynamic-email, [href^="mailto:"]').forEach(el => {
+                // Skip if inside footer credits
+                if (el.closest('.footer-credits')) return;
+                
                 if (el.tagName === 'A') {
                     el.href = `mailto:${email}`;
                 }
@@ -459,17 +463,26 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // Room Slider Logic
+    // Room Slider Logic with Layout Caching
     const roomSlider = document.querySelector('.room-slider');
     const roomPrevBtn = document.querySelector('.room-prev');
     const roomNextBtn = document.querySelector('.room-next');
 
     if (roomSlider && roomPrevBtn && roomNextBtn) {
-        roomNextBtn.addEventListener('click', () => {
+        let scrollAmount = 0;
+        let maxScroll = 0;
+
+        function updateSliderMetrics() {
             const card = roomSlider.querySelector('.room-card');
-            const scrollAmount = card ? card.offsetWidth + 30 : 380;
-            const maxScroll = roomSlider.scrollWidth - roomSlider.clientWidth;
-            
+            scrollAmount = card ? card.offsetWidth + 30 : 380;
+            maxScroll = roomSlider.scrollWidth - roomSlider.clientWidth;
+        }
+
+        // Initialize metrics
+        updateSliderMetrics();
+        window.addEventListener('resize', updateSliderMetrics);
+
+        roomNextBtn.addEventListener('click', () => {
             if (roomSlider.scrollLeft >= maxScroll - 10) {
                 roomSlider.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
@@ -478,10 +491,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         roomPrevBtn.addEventListener('click', () => {
-            const card = roomSlider.querySelector('.room-card');
-            const scrollAmount = card ? card.offsetWidth + 30 : 380;
-            const maxScroll = roomSlider.scrollWidth - roomSlider.clientWidth;
-
             if (roomSlider.scrollLeft <= 10) {
                 roomSlider.scrollTo({ left: maxScroll, behavior: 'smooth' });
             } else {

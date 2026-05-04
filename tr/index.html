@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="../css/style.min.css" as="style">
+    <link rel="preload" href="../assets/hero_1.webp" as="image">
+    
+    
+
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator && (window.location.protocol === 'http:' || window.location.protocol === 'https:')) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed', err));
+            });
+        }
+    </script>
+    
+    <!-- Deferred CSS & Fonts -->
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css">
+    <noscript>
+        <link rel="stylesheet" href="../css/style.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css">
+    </noscript>
     <meta name="keywords"
         content="batum otelleri, batum gezilecek yerler, batumi hotel, sky tower batumi, batum konaklama, batum 5 yıldızlı oteller, batum tatil, batum turları, batum otel fiyatları, batum lüks oteller, batum deniz manzaralı oteller, batum casino otelleri, batum restoranlar, batum fitness, batum spa, batum merkez otelleri, batum uygun oteller, batum uçak bileti, batum hava durumu, batum rehberi, batum turları 2024, batum gece hayatı, batum kumarhane, batum ali ve nino, batum bulvarı, batum botanik bahçesi, gürcistan, batum gürcistan, gürcistan batum, batum turu, batum nerede, batum tur, batumi, batum'da gezilecek yerler, batum giriş ücreti 2024, batum vize istiyor mu, batum pasaport istiyor mu, batum giriş ücreti, batum otel, orbi city hotel, orbi city, orbi city batum, orbi hotel batumi, sky tower batum, sky tower hotel, legend hotel batumi, legend hotel batum, batum legend hotel, hotels, batum oteller, batum sheraton, sheraton batum, booking, airbnb, trabzon batum, trabzon batum arası kaç km, batum trabzon arası kaç km, rize batum arası kaç km, batum istanbul uçak bileti, istanbul batum uçak bileti, batum otobüs bileti, rize batum otobüs, otobüs bileti, batum yol tarifi, batum sınır kapısı, batum iphone, batum iphone fiyatları, batum telefon fiyatları, zoomer batum, batum zoomer, zoomer, iphone 14, batum apple, batum iphone 14 pro max, iphone 14 pro max, zoomer ge, iphone 14 pro, playstation 5, iplus batum, batum teknoloji mağazaları, batum elektronik market, gürcistan iphone fiyatları, batum apple fiyatları, gürcistan telefon fiyatları, batum avm, lari, lari tl, lari kaç tl, batum saat kaç, batum para birimi, 1 lari kaç tl, gürcistan larisi, batum yılbaşı, batum hava durumu 30 günlük, batum tiflis, batum tiflis turu, karadeniz turu, karadeniz batum turu, batum casino">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO & Localization -->
     <title data-i18n="meta_title_home">SkyTower Hotel Batumi | 5 Yıldızlı Lüks & Konfor</title>
     <meta name="description" data-i18n="meta_desc_home"
         content="SkyTower Hotel Batumi'de Karadeniz'in büyüleyici manzarası eşliğinde 5 yıldızlı lüks konaklama. Hemen yerinizi ayırtın.">
-    <link rel="canonical" href="https://skytowerhotelbatumi.com/tr/index.html">
-    <link rel="alternate" hreflang="tr" href="https://skytowerhotelbatumi.com/tr/index.html">
-    <link rel="alternate" hreflang="en" href="https://skytowerhotelbatumi.com/en/index.html">
-    <link rel="alternate" hreflang="ru" href="https://skytowerhotelbatumi.com/ru/index.html">
-    <link rel="alternate" hreflang="ka" href="https://skytowerhotelbatumi.com/ka/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://skytowerhotelbatumi.com/en/index.html">
-
-    <!-- Preload Critical Assets -->
-    <link rel="preload" href="../assets/hero_1.webp" as="image" fetchpriority="high">
-    <link rel="preload" href="../css/style.css" as="style">
-
-    <!-- CSS & Fonts -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
-
     <!-- Schema.org JSON-LD for Hotel -->
     <script type="application/ld+json">
     {
@@ -52,9 +63,7 @@
     }
     </script>
 </head>
-
 <body>
-
     <!-- Header -->
     <header id="main-header">
         <div class="container">
@@ -94,12 +103,11 @@
             </div>
         </div>
     </header>
-
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-slider">
             <div class="slide active">
-                <img src="../assets/hero_1.webp" alt="SkyTower Hotel Luxury" fetchpriority="high" class="hero-img-lcp">
+                <img src="../assets/hero_1.webp" alt="SkyTower Hotel Luxury" class="hero-img-lcp">
             </div>
         </div>
         <div class="container hero-container">
@@ -113,7 +121,6 @@
                         Ara</a>
                 </div>
             </div>
-
             <div class="hero-promo-box">
                 <div class="promo-header">
                     <h3 data-i18n="promo_book_pay">Rezervasyonunu Yap, Girişte Öde!</h3>
@@ -134,7 +141,6 @@
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
-
     <!-- Welcome Section -->
     <section class="section">
         <div class="container">
@@ -154,14 +160,12 @@
             </div>
         </div>
     </section>
-
     <!-- Rooms Section -->
     <section id="odalar" class="section bg-light">
         <div class="container">
             <h2 class="section-title text-center" data-i18n="nav_rooms">Odalar</h2>
             <p class="text-center section-subtitle" data-i18n="hero_subtitle">Lüksün ve konforun Karadeniz ile buluştuğu
                 noktada, unutulmaz bir konaklama için yerinizi ayırtın.</p>
-
             <div class="room-slider-wrapper">
                 <button class="slider-btn room-prev" aria-label="Önceki Oda"><i
                         class="fas fa-chevron-left"></i></button>
@@ -189,7 +193,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Double Room with Sea View -->
                     <div class="room-card">
                         <div class="room-image">
@@ -213,11 +216,10 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Family Suite -->
                     <div class="room-card">
                         <div class="room-image">
-                            <img src="../assets/family_suite/room_66297d07841f1.webp" alt="Family Suite">
+                            <img decoding="async" loading="lazy" src="../assets/family_suite/room_66297d07841f1.webp" alt="Family Suite">
                             <span class="room-badge" data-i18n="badge_exclusive">Exclusive</span>
                         </div>
                         <div class="room-info">
@@ -235,11 +237,10 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Deluxe Double Room with Sea View -->
                     <div class="room-card">
                         <div class="room-image">
-                            <img src="../assets/del_dob_see_viuw/room_66297e1735018.webp" alt="Deluxe Double Room">
+                            <img decoding="async" loading="lazy" src="../assets/del_dob_see_viuw/room_66297e1735018.webp" alt="Deluxe Double Room">
                             <span class="room-badge" data-i18n="badge_luxury">Premium</span>
                         </div>
                         <div class="room-info">
@@ -257,11 +258,10 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Deluxe Twin Room with Sea View -->
                     <div class="room-card" data-room="deluxe_twin">
                         <div class="room-image">
-                            <img src="../assets/del_del_sea_view/room_66297f273ed32.webp" alt="Deluxe Twin Room">
+                            <img decoding="async" loading="lazy" src="../assets/del_del_sea_view/room_66297f273ed32.webp" alt="Deluxe Twin Room">
                             <div class="room-badge">Luxury</div>
                         </div>
                         <div class="room-info">
@@ -279,11 +279,10 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Deluxe King Suite -->
                     <div class="room-card" data-room="deluxe_king">
                         <div class="room-image">
-                            <img src="../assets/del_kin_size/room_662980517baae.webp" alt="Deluxe King Suite">
+                            <img decoding="async" loading="lazy" src="../assets/del_kin_size/room_662980517baae.webp" alt="Deluxe King Suite">
                             <div class="room-badge">Luxury</div>
                         </div>
                         <div class="room-info">
@@ -302,11 +301,10 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Presidential Suite -->
                     <div class="room-card" data-room="presidential">
                         <div class="room-image">
-                            <img src="../assets/pre_suite/room_662983f68a41f.webp" alt="Presidential Suite">
+                            <img decoding="async" loading="lazy" src="../assets/pre_suite/room_662983f68a41f.webp" alt="Presidential Suite">
                             <div class="room-badge" data-i18n="badge_presidential">Presidential</div>
                         </div>
                         <div class="room-info">
@@ -324,11 +322,10 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Double Room with City View -->
                     <div class="room-card">
                         <div class="room-image">
-                            <img src="../assets/dob_cit_viu/room_66298235ba7f9.webp" alt="Double Room with City View">
+                            <img decoding="async" loading="lazy" src="../assets/dob_cit_viu/room_66298235ba7f9.webp" alt="Double Room with City View">
                         </div>
                         <div class="room-info">
                             <h3 data-i18n="room_double_city">Şehir Manzaralı Çift Kişilik Oda</h3>
@@ -345,7 +342,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Twin Room with City View -->
                     <div class="room-card">
                         <div class="room-image">
@@ -367,11 +363,10 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Standard Twin Room -->
                     <div class="room-card" data-room="standard_twin">
                         <div class="room-image">
-                            <img src="../assets/standart_twin_room/room_6629844c4bf79.webp" alt="Standard Twin Room">
+                            <img decoding="async" loading="lazy" src="../assets/standart_twin_room/room_6629844c4bf79.webp" alt="Standard Twin Room">
                             <div class="room-badge" data-i18n="badge_standard">Standard</div>
                         </div>
                         <div class="room-info">
@@ -395,13 +390,12 @@
             </div>
         </div>
     </section>
-
     <!-- Fitness Section -->
     <section id="fitness-home" class="section">
         <div class="container">
             <div class="grid">
                 <div class="grid-item">
-                    <img src="../assets/fitness_centre/page_66297027bff3b.webp" alt="SkyTower Fitness Centre">
+                    <img decoding="async" loading="lazy" src="../assets/fitness_centre/page_66297027bff3b.webp" alt="SkyTower Fitness Centre">
                 </div>
                 <div class="grid-item">
                     <h2 class="section-title" data-i18n="fitness_title">Fitness Merkezi</h2>
@@ -418,7 +412,6 @@
             </div>
         </div>
     </section>
-
     <!-- Local Call Center Section -->
     <section id="iletisim" class="section bg-light">
         <div class="container text-center">
@@ -438,7 +431,6 @@
             </div>
         </div>
     </section>
-
     <!-- Testimonials Section -->
     <section id="yorumlar" class="section">
         <div class="container">
@@ -479,7 +471,6 @@
             </div>
         </div>
     </section>
-
     <!-- FAQ Section -->
     <section id="sss" class="section bg-light">
         <div class="container">
@@ -528,7 +519,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -558,13 +548,10 @@
                 <p>&copy; 2024 SkyTower Hotel Batumi. <span data-i18n="footer_rights">Tüm Hakları Saklıdır.</span> | <a
                         href="#" data-i18n="privacy_policy">Gizlilik Politikası</a></p>
                 <p class="footer-credits">
-                    <span data-i18n="design_credits">Tasarım ve Geliştirme</span>: <strong>Tansu Cak</strong> | <a
-                        href="mailto:tansucak@gmail.com">tansucak@gmail.com</a>
-                </p>
+                    <span data-i18n="design_credits">Tasarım ve Geliştirme</span>: <strong>Tansu Cak</strong> | <a href="mailto:tansucak@gmail.com">tansucak@gmail.com</a></p>
             </div>
         </div>
     </footer>
-
     <!-- Room Details Modal -->
     <div id="roomModal" class="modal">
         <div class="modal-content">
@@ -574,9 +561,7 @@
             </div>
         </div>
     </div>
-
-    <script src="../js/translations.js" defer></script>
-    <script src="../js/script.js" defer></script>
+    <script src="../js/translations_tr.min.js" defer></script>
+    <script src="../js/script.min.js" defer></script>
 </body>
-
 </html>

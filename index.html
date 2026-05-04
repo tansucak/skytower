@@ -2,6 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="assets/hero_1.webp" as="image">
+    
+    
+
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator && (window.location.protocol === 'http:' || window.location.protocol === 'https:')) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed', err));
+            });
+        }
+    </script>
+    
+    <!-- Deferred CSS & Fonts -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css">
+    <noscript>
+        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css">
+    </noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkyTower Hotel Batumi - Redirecting...</title>
     <!-- Updated CSP to allow inline script and connection to IP API for Geolocation -->
@@ -9,7 +43,6 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin-top: 100px; background-color: #f8f9fa; color: #333; }
         .redirect-container { padding: 40px; background: #fff; max-width: 500px; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
@@ -18,7 +51,6 @@
         a { color: #d4af37; text-decoration: none; font-weight: 600; }
         .fallback-text { font-size: 12px; margin-top: 20px; }
     </style>
-    
     <script type="text/javascript">
         // 1. KULLANICIYI İLGİLİ DİLE YÖNLENDİREN ANA FONKSİYON
         function redirectToLanguage(lang) {
@@ -26,22 +58,18 @@
             localStorage.setItem('preferredLang', lang);
             window.location.href = './' + lang + '/index.html';
         }
-
         document.addEventListener('DOMContentLoaded', function() {
             // 2. DAHA ÖNCE SEÇİLMİŞ VEYA TESPİT EDİLMİŞ DİL VAR MI?
             const savedLang = localStorage.getItem('preferredLang');
             const supportedLangs = ['tr', 'en', 'ru', 'ka'];
-            
             if (savedLang && supportedLangs.includes(savedLang)) {
                 // Kayıtlı dil varsa doğrudan yönlendir (API gecikmesi yaşatmaz)
                 redirectToLanguage(savedLang);
                 return;
             }
-
             // 3. TARAYICI DİLİNİ KONTROL ET (ÖNCELİKLİ)
             let browserLang = navigator.language || navigator.userLanguage || '';
             browserLang = browserLang.toLowerCase().substring(0, 2); // Sadece ilk iki harf (tr, en, ru vb.)
-            
             // Eğer tarayıcı dili desteklediğimiz dillerdense, API'yi yormadan hemen yönlendir
             if (browserLang === 'tr') {
                 redirectToLanguage('tr');
@@ -57,14 +85,12 @@
                 redirectToLanguage('en');
                 return;
             }
-
             // 4. TARAYICI DİLİ BELİRSİZ VEYA DESTEKLENMİYORSA -> IP & KONUM KONTROLÜ
             // Ücretsiz ve hafif ipapi.co servisini kullanıyoruz
             fetch('https://ipapi.co/json/')
                 .then(response => response.json())
                 .then(data => {
                     const country = data.country_code; // ISO 3166-1 alpha-2 ülke kodu (TR, GE, RU vb.)
-                    
                     if (country === 'TR') {
                         redirectToLanguage('tr'); // Türkiye -> Türkçe
                     } else if (country === 'GE') {
@@ -84,7 +110,6 @@
                 });
         });
     </script>
-
     <!-- SEO & Alternate Links -->
     <link rel="alternate" hreflang="tr" href="https://skytowerbatumi.com/tr/index.html" />
     <link rel="alternate" hreflang="en" href="https://skytowerbatumi.com/en/index.html" />
