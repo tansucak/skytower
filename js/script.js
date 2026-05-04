@@ -119,10 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('scrolled');
         }
 
-        // Smart Hide/Show
-        if (currentScroll > lastScroll && currentScroll > 400) {
+        // Smart Hide/Show - Only hide if scrolling down and not at the very top
+        if (currentScroll > lastScroll && currentScroll > 200) {
             header.classList.add('header-hidden');
         } else {
+            // Show header when scrolling up or near top
             header.classList.remove('header-hidden');
         }
         lastScroll = currentScroll;
@@ -181,13 +182,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         <i class="fas fa-bed"></i>
                         <span>${translations[lang]['nav_rooms']}</span>
                     </a>
-                    <a href="batum.html" class="bottom-nav-item ${isGuide ? 'active' : ''}">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <span>${translations[lang]['nav_guide'].split(' ')[0]}</span>
+                    <a href="https://wa.me/${translations[lang]['whatsapp_number'].replace(/\D/g, '')}" class="bottom-nav-item" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
                     </a>
-                    <a href="tel:${translations[lang]['phone_number'].replace(/\s/g, '')}" class="bottom-nav-item">
+                    <a href="tel:${translations[lang]['phone_number'].replace(/\D/g, '')}" class="bottom-nav-item">
                         <i class="fas fa-phone-alt"></i>
-                        <span>${translations[lang]['btn_call_now'].split(' ')[0]}</span>
+                        <span>${lang === 'tr' ? 'Ara' : translations[lang]['btn_call_now'].split(' ')[0]}</span>
                     </a>
                 `;
                 document.body.appendChild(nav);
@@ -295,7 +296,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                     el.placeholder = data[key];
                 } else {
-                    el.textContent = data[key];
+                    // Optimized content injection:
+                    // If element has nested icons or spans, we should ideally target a specific child,
+                    // but as a safety measure, we only update if there are no complex nested structures
+                    // or if the translation itself contains HTML.
+                    if (el.querySelector('i, span:not([data-i18n])')) {
+                        // Preserve icons if they exist by only replacing text nodes
+                        Array.from(el.childNodes).forEach(node => {
+                            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '') {
+                                node.textContent = data[key];
+                            }
+                        });
+                    } else {
+                        el.innerHTML = data[key];
+                    }
                 }
             }
         });
@@ -310,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (el.tagName === 'A') {
                     el.href = `tel:${phone.replace(/\s+/g, '')}`;
                 }
-                el.textContent = phone;
+                el.innerHTML = phone;
             });
         }
 
@@ -355,8 +369,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentRoomFolder = '';
 
     if (modal && modalBody) {
-        document.querySelectorAll('.btn-details').forEach(btn => {
-            btn.addEventListener('click', () => {
+        document.querySelectorAll('.room-card').forEach(card => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', (e) => {
+                // If the user clicks on the button specifically, we don't need special handling
+                // as both will trigger the modal opening logic.
+                const btn = card.querySelector('.btn-details');
                 const roomId = btn.getAttribute('data-room');
                 const room = roomData[roomId];
                 if (room) {
@@ -409,28 +427,36 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="tech-item"><strong>${escapeHTML(translations[lang]['label_baths'] || 'Bathrooms')}:</strong> ${escapeHTML(room.baths)}</div>
                         <div class="tech-item"><strong>${escapeHTML(translations[lang]['label_view'] || 'View')}:</strong> ${escapeHTML(translations[lang][`view_${room.view.toLowerCase().replace(/ /g, '_').replace(/&/g, '')}`.replace(/__/g, '_')] || room.view)}</div>
                     </div>
-                    <p class="modal-desc">${escapeHTML(desc)}</p>
+                    <p class="modal-desc">${desc}</p>
                     <div class="modal-amenities-section">
                         <h3 data-i18n="room_features">${translations[lang]['room_features']}</h3>
                         <div class="modal-amenities">
-                            <div class="amenity-item"><i class="fas fa-wifi"></i> Free Wi-Fi</div>
-                            <div class="amenity-item"><i class="fas fa-tv"></i> Smart TV</div>
-                            <div class="amenity-item"><i class="fas fa-snowflake"></i> Air Conditioning</div>
-                            <div class="amenity-item"><i class="fas fa-concierge-bell"></i> 24/7 Room Service</div>
-                            <div class="amenity-item"><i class="fas fa-safe"></i> Safe Box</div>
-                            <div class="amenity-item"><i class="fas fa-coffee"></i> Coffee Machine</div>
+                            <div class="amenity-item"><i class="fas fa-wifi"></i> ${translations[lang]['amenity_wifi']}</div>
+                            <div class="amenity-item"><i class="fas fa-tv"></i> ${translations[lang]['amenity_tv']}</div>
+                            <div class="amenity-item"><i class="fas fa-snowflake"></i> ${translations[lang]['amenity_ac']}</div>
+                            <div class="amenity-item"><i class="fas fa-concierge-bell"></i> ${translations[lang]['amenity_service']}</div>
+                            <div class="amenity-item"><i class="fas fa-safe"></i> ${translations[lang]['amenity_safe']}</div>
+                            <div class="amenity-item"><i class="fas fa-coffee"></i> ${translations[lang]['amenity_coffee']}</div>
                         </div>
                     </div>
                     <div class="modal-actions">
-                        <a href="tel:08500000000" class="btn btn-gold dynamic-phone">${translations[lang]['btn_call_now']}</a>
+                        <button class="btn btn-gold close-modal-btn">${translations[lang]['btn_close'] || 'KAPAT'}</button>
                     </div>
                 </div>
             `;
 
             const nextBtn = modalBody.querySelector('.modal-next');
             const prevBtn = modalBody.querySelector('.modal-prev');
+            const closePopBtn = modalBody.querySelector('.close-modal-btn');
+            
             if (nextBtn) nextBtn.onclick = () => navigateGallery(1);
             if (prevBtn) prevBtn.onclick = () => navigateGallery(-1);
+            if (closePopBtn) {
+                closePopBtn.onclick = () => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                };
+            }
         }
 
         function navigateGallery(direction) {

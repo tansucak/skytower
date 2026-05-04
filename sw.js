@@ -1,4 +1,4 @@
-const CACHE_NAME = 'skytower-v1';
+const CACHE_NAME = 'SKY TOWER-v1';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
