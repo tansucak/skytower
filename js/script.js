@@ -104,6 +104,109 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Modern Smart Header & Scroll Reveal
+    const header = document.getElementById('main-header');
+    let lastScroll = 0;
+    let ticking = false;
+
+    function updateHeader() {
+        const currentScroll = window.pageYOffset;
+
+        // Sticky state
+        if (currentScroll > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Smart Hide/Show
+        if (currentScroll > lastScroll && currentScroll > 400) {
+            header.classList.add('header-hidden');
+        } else {
+            header.classList.remove('header-hidden');
+        }
+        lastScroll = currentScroll;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    });
+
+    // Intersection Observer for Modern Reveal Animations
+    const revealOptions = {
+        threshold: 0.05,
+        rootMargin: "0px 0px 100px 0px" // Trigger 100px BEFORE entering viewport
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, revealOptions);
+
+    // Apply reveal to sections and cards
+    document.querySelectorAll('.section, .room-card, .grid-item, .hero-content, .footer-grid > div').forEach(el => {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+    });
+
+    // Dynamic Mobile Bottom Nav
+    function initBottomNav() {
+        if (window.innerWidth <= 768 && !document.querySelector('.bottom-nav')) {
+            const lang = document.documentElement.lang || 'tr';
+            const nav = document.createElement('div');
+            nav.className = 'bottom-nav';
+
+            const path = window.location.pathname;
+            const isHome = path.endsWith('index.html') || path.endsWith('/') || (!path.includes('.html') && path.length > 5);
+            const isRooms = path.includes('odalar.html');
+            const isGuide = path.includes('batum.html');
+
+            nav.innerHTML = `
+                <a href="index.html" class="bottom-nav-item ${isHome ? 'active' : ''}">
+                    <i class="fas fa-home"></i>
+                    <span>${translations[lang]['nav_home']}</span>
+                </a>
+                <a href="odalar.html" class="bottom-nav-item ${isRooms ? 'active' : ''}">
+                    <i class="fas fa-bed"></i>
+                    <span>${translations[lang]['nav_rooms']}</span>
+                </a>
+                <a href="batum.html" class="bottom-nav-item ${isGuide ? 'active' : ''}">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>${translations[lang]['nav_guide'].split(' ')[0]}</span>
+                </a>
+                <a href="tel:${translations[lang]['phone_number'].replace(/\s/g, '')}" class="bottom-nav-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>${translations[lang]['btn_call_now'].split(' ')[0]}</span>
+                </a>
+            `;
+            document.body.appendChild(nav);
+        }
+    }
+    initBottomNav();
+
+    // FAQ Accordion Logic
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            item.classList.toggle('active');
+            
+            // Optional: Close other items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+        });
+    });
+
     const langOptions = document.querySelectorAll('.lang-option');
     const currentLang = document.documentElement.lang || 'tr';
 
@@ -224,124 +327,114 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPathPrefix = '';
     let currentRoomFolder = '';
 
-    document.querySelectorAll('.btn-details').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const roomId = btn.getAttribute('data-room');
-            const room = roomData[roomId];
-            if (room) {
-                currentGallery = room.gallery || [];
-                currentGalleryIndex = 0;
-                currentRoomFolder = room.folder;
-                renderModal(room, roomId);
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            }
+    if (modal && modalBody) {
+        document.querySelectorAll('.btn-details').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const roomId = btn.getAttribute('data-room');
+                const room = roomData[roomId];
+                if (room) {
+                    currentGallery = room.gallery || [];
+                    currentGalleryIndex = 0;
+                    currentRoomFolder = room.folder;
+                    renderModal(room, roomId);
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
         });
-    });
 
-    // Security Feature: HTML Sanitizer to prevent DOM-based XSS attacks
-    function escapeHTML(str) {
-        if (!str) return '';
-        return String(str).replace(/[&<>'"]/g, 
-            tag => ({
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                "'": '&#39;',
-                '"': '&quot;'
-            }[tag] || tag)
-        );
-    }
+        // Security Feature: HTML Sanitizer
+        function escapeHTML(str) {
+            if (!str) return '';
+            return String(str).replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
 
-    function renderModal(room, roomId) {
-        const lang = document.documentElement.lang || 'tr';
-        const isSubfolder = window.location.pathname.includes('/tr/') || 
-                          window.location.pathname.includes('/en/') || 
-                          window.location.pathname.includes('/ka/') || 
-                          window.location.pathname.includes('/ru/');
-        
-        currentPathPrefix = isSubfolder ? '../' : '';
-        const mainImgPath = `${currentPathPrefix}assets/${escapeHTML(room.folder)}/${escapeHTML(room.mainImage)}`;
-        
-        const titleKey = `room_${roomId}`;
-        const title = translations[lang][titleKey] || room.folder;
-        const descKey = `room_${roomId}_desc`;
-        const desc = translations[lang][descKey] || '';
+        function renderModal(room, roomId) {
+            const lang = document.documentElement.lang || 'tr';
+            const isSubfolder = window.location.pathname.includes('/tr/') || 
+                              window.location.pathname.includes('/en/') || 
+                              window.location.pathname.includes('/ka/') || 
+                              window.location.pathname.includes('/ru/');
+            
+            currentPathPrefix = isSubfolder ? '../' : '';
+            const mainImgPath = `${currentPathPrefix}assets/${escapeHTML(room.folder)}/${escapeHTML(room.mainImage)}`;
+            
+            const titleKey = `room_${roomId}`;
+            const title = translations[lang][titleKey] || room.folder;
+            const descKey = `room_${roomId}_desc`;
+            const desc = translations[lang][descKey] || '';
 
-        // Safe injection using escaped variables
-        modalBody.innerHTML = `
-            <div class="modal-header-img">
-                <img src="${mainImgPath}" id="modal-main-img" alt="${escapeHTML(title)}">
-                ${room.gallery && room.gallery.length > 1 ? `
-                    <button class="modal-nav modal-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
-                    <button class="modal-nav modal-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
-                ` : ''}
-            </div>
-            <div class="modal-info">
-                <h2>${escapeHTML(title)}</h2>
-                
-                <div class="room-tech-details">
-                    <div class="tech-item"><strong>${escapeHTML(translations[lang]['label_size'] || 'Size')}:</strong> ${escapeHTML(room.size)}</div>
-                    <div class="tech-item"><strong>${escapeHTML(translations[lang]['label_rooms'] || 'Rooms')}:</strong> ${escapeHTML(room.rooms)}</div>
-                    <div class="tech-item"><strong>${escapeHTML(translations[lang]['label_baths'] || 'Bathrooms')}:</strong> ${escapeHTML(room.baths)}</div>
-                    <div class="tech-item"><strong>${escapeHTML(translations[lang]['label_view'] || 'View')}:</strong> ${escapeHTML(translations[lang][`view_${room.view.toLowerCase().replace(/ /g, '_').replace(/&/g, '')}`.replace(/__/g, '_')] || room.view)}</div>
+            modalBody.innerHTML = `
+                <div class="modal-header-img">
+                    <img src="${mainImgPath}" id="modal-main-img" alt="${escapeHTML(title)}">
+                    ${room.gallery && room.gallery.length > 1 ? `
+                        <button class="modal-nav modal-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+                        <button class="modal-nav modal-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+                    ` : ''}
                 </div>
-
-                <p class="modal-desc">${escapeHTML(desc)}</p>
-                
-                <div class="modal-amenities-section">
-                    <h3 data-i18n="room_features">${translations[lang]['room_features']}</h3>
-                    <div class="modal-amenities">
-                        <div class="amenity-item"><i class="fas fa-wifi"></i> Free Wi-Fi</div>
-                        <div class="amenity-item"><i class="fas fa-tv"></i> Smart TV</div>
-                        <div class="amenity-item"><i class="fas fa-snowflake"></i> Air Conditioning</div>
-                        <div class="amenity-item"><i class="fas fa-concierge-bell"></i> 24/7 Room Service</div>
-                        <div class="amenity-item"><i class="fas fa-safe"></i> Safe Box</div>
-                        <div class="amenity-item"><i class="fas fa-coffee"></i> Coffee Machine</div>
+                <div class="modal-info">
+                    <h2>${escapeHTML(title)}</h2>
+                    <div class="room-tech-details">
+                        <div class="tech-item"><strong>${escapeHTML(translations[lang]['label_size'] || 'Size')}:</strong> ${escapeHTML(room.size)}</div>
+                        <div class="tech-item"><strong>${escapeHTML(translations[lang]['label_rooms'] || 'Rooms')}:</strong> ${escapeHTML(room.rooms)}</div>
+                        <div class="tech-item"><strong>${escapeHTML(translations[lang]['label_baths'] || 'Bathrooms')}:</strong> ${escapeHTML(room.baths)}</div>
+                        <div class="tech-item"><strong>${escapeHTML(translations[lang]['label_view'] || 'View')}:</strong> ${escapeHTML(translations[lang][`view_${room.view.toLowerCase().replace(/ /g, '_').replace(/&/g, '')}`.replace(/__/g, '_')] || room.view)}</div>
+                    </div>
+                    <p class="modal-desc">${escapeHTML(desc)}</p>
+                    <div class="modal-amenities-section">
+                        <h3 data-i18n="room_features">${translations[lang]['room_features']}</h3>
+                        <div class="modal-amenities">
+                            <div class="amenity-item"><i class="fas fa-wifi"></i> Free Wi-Fi</div>
+                            <div class="amenity-item"><i class="fas fa-tv"></i> Smart TV</div>
+                            <div class="amenity-item"><i class="fas fa-snowflake"></i> Air Conditioning</div>
+                            <div class="amenity-item"><i class="fas fa-concierge-bell"></i> 24/7 Room Service</div>
+                            <div class="amenity-item"><i class="fas fa-safe"></i> Safe Box</div>
+                            <div class="amenity-item"><i class="fas fa-coffee"></i> Coffee Machine</div>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="tel:08500000000" class="btn btn-gold dynamic-phone">${translations[lang]['btn_call_now']}</a>
                     </div>
                 </div>
+            `;
 
-                <div class="modal-actions">
-                    <a href="tel:08500000000" class="btn btn-gold dynamic-phone">${translations[lang]['btn_call_now']}</a>
-                </div>
-            </div>
-        `;
-
-        // Add slider events
-        const nextBtn = modalBody.querySelector('.modal-next');
-        const prevBtn = modalBody.querySelector('.modal-prev');
-
-        if (nextBtn) nextBtn.onclick = () => navigateGallery(1);
-        if (prevBtn) prevBtn.onclick = () => navigateGallery(-1);
-    }
-
-    function navigateGallery(direction) {
-        currentGalleryIndex += direction;
-        if (currentGalleryIndex >= currentGallery.length) currentGalleryIndex = 0;
-        if (currentGalleryIndex < 0) currentGalleryIndex = currentGallery.length - 1;
-        
-        const mainImg = document.getElementById('modal-main-img');
-        if (mainImg) {
-            mainImg.src = `${currentPathPrefix}assets/${currentRoomFolder}/${currentGallery[currentGalleryIndex]}`;
+            const nextBtn = modalBody.querySelector('.modal-next');
+            const prevBtn = modalBody.querySelector('.modal-prev');
+            if (nextBtn) nextBtn.onclick = () => navigateGallery(1);
+            if (prevBtn) prevBtn.onclick = () => navigateGallery(-1);
         }
-    }
 
-    // Function to update main image when clicking gallery thumbs
-    window.updateMainImage = function(src) {
-        document.getElementById('modal-main-img').src = src;
-    };
-
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
-
-    window.onclick = (event) => {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+        function navigateGallery(direction) {
+            currentGalleryIndex += direction;
+            if (currentGalleryIndex >= currentGallery.length) currentGalleryIndex = 0;
+            if (currentGalleryIndex < 0) currentGalleryIndex = currentGallery.length - 1;
+            const mainImg = document.getElementById('modal-main-img');
+            if (mainImg) {
+                mainImg.src = `${currentPathPrefix}assets/${currentRoomFolder}/${currentGallery[currentGalleryIndex]}`;
+            }
         }
-    };
+
+        window.updateMainImage = function(src) {
+            const mainImg = document.getElementById('modal-main-img');
+            if (mainImg) mainImg.src = src;
+        };
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        };
+    }
 
     // Room Slider Logic
     const roomSlider = document.querySelector('.room-slider');
@@ -352,13 +445,25 @@ document.addEventListener('DOMContentLoaded', () => {
         roomNextBtn.addEventListener('click', () => {
             const card = roomSlider.querySelector('.room-card');
             const scrollAmount = card ? card.offsetWidth + 30 : 380;
-            roomSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            const maxScroll = roomSlider.scrollWidth - roomSlider.clientWidth;
+            
+            if (roomSlider.scrollLeft >= maxScroll - 10) {
+                roomSlider.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                roomSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
         });
         
         roomPrevBtn.addEventListener('click', () => {
             const card = roomSlider.querySelector('.room-card');
             const scrollAmount = card ? card.offsetWidth + 30 : 380;
-            roomSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            const maxScroll = roomSlider.scrollWidth - roomSlider.clientWidth;
+
+            if (roomSlider.scrollLeft <= 10) {
+                roomSlider.scrollTo({ left: maxScroll, behavior: 'smooth' });
+            } else {
+                roomSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
         });
     }
 
