@@ -19,15 +19,17 @@
     <link rel="alternate" hreflang="x-default" href="https://skytowerhotelbatumi.com/en/index.html">
 
     <!-- Preload Critical Assets -->
-    <link rel="preload" href="../assets/hero_1.webp" as="image">
+    <link rel="preload" href="../assets/hero_1.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="../css/style.css" as="style">
 
     <!-- CSS & Fonts -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+        media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
 
     <!-- Schema.org JSON-LD for Hotel -->
     <script type="application/ld+json">
@@ -57,7 +59,7 @@
     <header id="main-header">
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="../assets/logo.png" alt="SkyTower Hotel Logo"></a>
+                <a href="index.html"><img src="../assets/logo.png" alt="SkyTower Hotel Logo" width="180" height="60"></a>
             </div>
             <nav id="nav-menu">
                 <ul>
@@ -93,11 +95,12 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-slider">
-            <div class="slide active"></div>
+            <div class="slide active">
+                <img src="../assets/hero_1.webp" alt="SkyTower Hotel Luxury" fetchpriority="high" class="hero-img-lcp">
+            </div>
         </div>
         <div class="container hero-container">
             <div class="hero-content">
@@ -572,8 +575,8 @@
         </div>
     </div>
 
-    <script src="../js/translations.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/translations.js" defer></script>
+    <script src="../js/script.js" defer></script>
 </body>
 
 </html>

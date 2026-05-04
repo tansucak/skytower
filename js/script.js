@@ -151,61 +151,84 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, revealOptions);
 
-    // Apply reveal to sections and cards
-    document.querySelectorAll('.section, .room-card, .grid-item, .hero-content, .footer-grid > div').forEach(el => {
+    // Apply reveal to sections and cards (Exclude hero to improve LCP)
+    document.querySelectorAll('.section, .room-card, .grid-item, .footer-grid > div').forEach(el => {
         el.classList.add('reveal');
         revealObserver.observe(el);
     });
 
-    // Dynamic Mobile Bottom Nav
-    function initBottomNav() {
-        if (window.innerWidth <= 768 && !document.querySelector('.bottom-nav')) {
-            const lang = document.documentElement.lang || 'tr';
-            const nav = document.createElement('div');
-            nav.className = 'bottom-nav';
+    // Defer non-critical initializations to reduce long tasks
+    setTimeout(() => {
+        // Dynamic Mobile Bottom Nav
+        function initBottomNav() {
+            if (window.innerWidth <= 768 && !document.querySelector('.bottom-nav')) {
+                const lang = document.documentElement.lang || 'tr';
+                const nav = document.createElement('div');
+                nav.className = 'bottom-nav';
 
-            const path = window.location.pathname;
-            const isHome = path.endsWith('index.html') || path.endsWith('/') || (!path.includes('.html') && path.length > 5);
-            const isRooms = path.includes('odalar.html');
-            const isGuide = path.includes('batum.html');
+                const path = window.location.pathname;
+                const isHome = path.endsWith('index.html') || path.endsWith('/') || (!path.includes('.html') && path.length > 5);
+                const isRooms = path.includes('odalar.html');
+                const isGuide = path.includes('batum.html');
 
-            nav.innerHTML = `
-                <a href="index.html" class="bottom-nav-item ${isHome ? 'active' : ''}">
-                    <i class="fas fa-home"></i>
-                    <span>${translations[lang]['nav_home']}</span>
-                </a>
-                <a href="odalar.html" class="bottom-nav-item ${isRooms ? 'active' : ''}">
-                    <i class="fas fa-bed"></i>
-                    <span>${translations[lang]['nav_rooms']}</span>
-                </a>
-                <a href="batum.html" class="bottom-nav-item ${isGuide ? 'active' : ''}">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <span>${translations[lang]['nav_guide'].split(' ')[0]}</span>
-                </a>
-                <a href="tel:${translations[lang]['phone_number'].replace(/\s/g, '')}" class="bottom-nav-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>${translations[lang]['btn_call_now'].split(' ')[0]}</span>
-                </a>
-            `;
-            document.body.appendChild(nav);
+                nav.innerHTML = `
+                    <a href="index.html" class="bottom-nav-item ${isHome ? 'active' : ''}">
+                        <i class="fas fa-home"></i>
+                        <span>${translations[lang]['nav_home']}</span>
+                    </a>
+                    <a href="odalar.html" class="bottom-nav-item ${isRooms ? 'active' : ''}">
+                        <i class="fas fa-bed"></i>
+                        <span>${translations[lang]['nav_rooms']}</span>
+                    </a>
+                    <a href="batum.html" class="bottom-nav-item ${isGuide ? 'active' : ''}">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>${translations[lang]['nav_guide'].split(' ')[0]}</span>
+                    </a>
+                    <a href="tel:${translations[lang]['phone_number'].replace(/\s/g, '')}" class="bottom-nav-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>${translations[lang]['btn_call_now'].split(' ')[0]}</span>
+                    </a>
+                `;
+                document.body.appendChild(nav);
+            }
         }
-    }
-    initBottomNav();
-
-    // FAQ Accordion Logic
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-            const item = question.parentElement;
-            item.classList.toggle('active');
-            
-            // Optional: Close other items
-            document.querySelectorAll('.faq-item').forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
+        
+        initBottomNav();
+        
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+                
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
             });
         });
-    });
+
+        // Generic Slider Function
+        function initSlider(selector, interval = 5000) {
+            const sliders = document.querySelectorAll(selector);
+            sliders.forEach(slider => {
+                const slides = slider.querySelectorAll('.slide');
+                if (slides.length > 1) {
+                    let currentSlide = 0;
+                    setInterval(() => {
+                        slides[currentSlide].classList.remove('active');
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        slides[currentSlide].classList.add('active');
+                    }, interval);
+                }
+            });
+        }
+
+        // Initialize Sliders
+        initSlider('.hero-slider', 10000); // 10s for hero
+        initSlider('.welcome-slider', 5000);  // 5s for welcome section
+    }, 150);
 
     const langOptions = document.querySelectorAll('.lang-option');
     const currentLang = document.documentElement.lang || 'tr';

@@ -15,7 +15,7 @@ const translations = {
         "trust_confirm": "Hızlı Rezervasyon Onayı",
         "trust_price": "En İyi Fiyat Garantisi",
         "phone_number": "+995 555 70 94 53",
-        "email": "tansucak@gmail.com",
+        "email": "skytowerhotelbatum@gmail.com",
         "whatsapp_number": "+995 555 70 94 53",
         "whatsapp_text": "WhatsApp'tan Yazın",
         "footer_about_title": "SKYTOWER HOTEL",
