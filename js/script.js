@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const path = window.location.pathname;
                 const isHome = path.endsWith('index.html') || path.endsWith('/') || (!path.includes('.html') && path.length > 5);
-                const isRooms = path.includes('odalar.html');
+                const isRooms = path.includes('rooms.html');
                 const isGuide = path.includes('batum.html');
 
                 nav.innerHTML = `
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <i class="fas fa-home"></i>
                         <span>${translations[lang]['nav_home']}</span>
                     </a>
-                    <a href="odalar.html" class="bottom-nav-item ${isRooms ? 'active' : ''}">
+                    <a href="rooms.html" class="bottom-nav-item ${isRooms ? 'active' : ''}">
                         <i class="fas fa-bed"></i>
                         <span>${translations[lang]['nav_rooms']}</span>
                     </a>
