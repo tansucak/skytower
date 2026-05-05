@@ -1,49 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <!-- Turkish -->
+
+  <!-- TR -->
   <url>
-    <loc>https://skytowerhotelbatumi.com/tr/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerhotelbatumi.com/tr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerhotelbatumi.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerhotelbatumi.com/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerhotelbatumi.com/ka/index.html"/>
-    <lastmod>2024-05-04</lastmod>
+    <loc>https://www.skytowerbatumi.com/tr/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
+    <lastmod>2026-05-06</lastmod>
     <priority>1.0</priority>
   </url>
-
-  <!-- English -->
   <url>
-    <loc>https://skytowerhotelbatumi.com/en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerhotelbatumi.com/tr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerhotelbatumi.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerhotelbatumi.com/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerhotelbatumi.com/ka/index.html"/>
-    <lastmod>2024-05-04</lastmod>
-    <priority>1.0</priority>
+    <loc>https://www.skytowerbatumi.com/tr/rooms.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/rooms.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/tr/restaurant.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/restaurant.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/tr/fitness.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/fitness.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/tr/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/guide.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/tr/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/contact.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Russian -->
+  <!-- EN -->
   <url>
-    <loc>https://skytowerhotelbatumi.com/ru/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerhotelbatumi.com/tr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerhotelbatumi.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerhotelbatumi.com/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerhotelbatumi.com/ka/index.html"/>
-    <lastmod>2024-05-04</lastmod>
+    <loc>https://www.skytowerbatumi.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
+    <lastmod>2026-05-06</lastmod>
     <priority>1.0</priority>
   </url>
-
-  <!-- Georgian -->
   <url>
-    <loc>https://skytowerhotelbatumi.com/ka/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://skytowerhotelbatumi.com/tr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://skytowerhotelbatumi.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://skytowerhotelbatumi.com/ru/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://skytowerhotelbatumi.com/ka/index.html"/>
-    <lastmod>2024-05-04</lastmod>
-    <priority>1.0</priority>
+    <loc>https://www.skytowerbatumi.com/en/rooms.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/rooms.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/en/restaurant.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/restaurant.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/en/fitness.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/fitness.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/en/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/guide.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/contact.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
   </url>
 
+  <!-- RU -->
+  <url>
+    <loc>https://www.skytowerbatumi.com/ru/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/ru/rooms.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/rooms.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/ru/restaurant.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/restaurant.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/ru/fitness.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/fitness.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/ru/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/guide.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/ru/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/contact.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- KA -->
+  <url>
+    <loc>https://www.skytowerbatumi.com/ka/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/ka/rooms.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/rooms.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/rooms.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/ka/restaurant.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/restaurant.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/restaurant.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/ka/fitness.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/fitness.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/fitness.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/ka/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/guide.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skytowerbatumi.com/ka/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/contact.html"/>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
