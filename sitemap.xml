@@ -2,14 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Root domain - redirects to language pages, noindex -->
+  <!-- Note: root / is a redirect page with noindex, not included in sitemap -->
+
   <!-- TR -->
+  <!-- Directory URL -->
+  <url>
+    <loc>https://www.skytowerbatumi.com/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <lastmod>2026-05-07</lastmod>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.skytowerbatumi.com/tr/index.html</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
     <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
-    <lastmod>2026-05-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <lastmod>2026-05-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -59,13 +74,25 @@
   </url>
 
   <!-- EN -->
+  <!-- Directory URL -->
+  <url>
+    <loc>https://www.skytowerbatumi.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <lastmod>2026-05-07</lastmod>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.skytowerbatumi.com/en/index.html</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
     <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
-    <lastmod>2026-05-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <lastmod>2026-05-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -115,13 +142,25 @@
   </url>
 
   <!-- RU -->
+  <!-- Directory URL -->
+  <url>
+    <loc>https://www.skytowerbatumi.com/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <lastmod>2026-05-07</lastmod>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.skytowerbatumi.com/ru/index.html</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
     <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
-    <lastmod>2026-05-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <lastmod>2026-05-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -171,13 +210,25 @@
   </url>
 
   <!-- KA -->
+  <!-- Directory URL -->
+  <url>
+    <loc>https://www.skytowerbatumi.com/ka/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <lastmod>2026-05-07</lastmod>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.skytowerbatumi.com/ka/index.html</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.skytowerbatumi.com/tr/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.skytowerbatumi.com/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.skytowerbatumi.com/ru/index.html"/>
     <xhtml:link rel="alternate" hreflang="ka" href="https://www.skytowerbatumi.com/ka/index.html"/>
-    <lastmod>2026-05-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.skytowerbatumi.com/en/index.html"/>
+    <lastmod>2026-05-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>

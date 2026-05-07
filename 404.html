@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>404 - Page Not Found | SKY TOWER Hotel Batumi</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .container {
+            padding: 40px 20px;
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #d4af37, #f5d063);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        h1 {
+            font-size: 28px;
+            margin: 20px 0 10px;
+            color: #d4af37;
+        }
+        p {
+            color: #ccc;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37, #f5d063);
+            color: #0a0a1a;
+        }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212,175,55,0.4); }
+        .btn-outline {
+            border: 2px solid #d4af37;
+            color: #d4af37;
+        }
+        .btn-outline:hover { background: rgba(212,175,55,0.1); transform: translateY(-2px); }
+        .logo { font-size: 22px; font-weight: 700; color: #d4af37; margin-bottom: 40px; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">SKY TOWER HOTEL</div>
+        <div class="error-code">404</div>
+        <h1>Page Not Found</h1>
+        <p>The page you are looking for does not exist or has been moved. Please visit our homepage to find what you need.</p>
+        <div class="btn-group">
+            <a href="/en/index.html" class="btn btn-gold">Go to Homepage</a>
+            <a href="/tr/index.html" class="btn btn-outline">Anasayfaya Git</a>
+        </div>
+    </div>
+    <script>
+        // Auto-redirect to correct language after 5 seconds
+        setTimeout(() => {
+            const lang = navigator.language?.substring(0, 2) || 'en';
+            const supported = ['tr', 'en', 'ru', 'ka'];
+            const target = supported.includes(lang) ? lang : 'en';
+            window.location.href = '/' + target + '/index.html';
+        }, 5000);
+    </script>
+</body>
+</html>

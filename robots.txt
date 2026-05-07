@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Block redirect/dispatcher page from indexing
+Disallow: /index.html
+
+# Block archive directory
+Disallow: /archive/
+
 Sitemap: https://www.skytowerbatumi.com/sitemap.xml
