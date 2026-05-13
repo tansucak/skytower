@@ -4,7 +4,7 @@ Allow: /
 # Block redirect/dispatcher page from indexing
 Disallow: /index.html
 
-# Block archive directory
-Disallow: /archive/
+# Block widgets directory
+Disallow: /widgets/
 
 Sitemap: https://www.skytowerbatumi.com/sitemap.xml

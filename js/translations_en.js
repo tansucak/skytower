@@ -177,5 +177,13 @@ const translations = { "en": {
         "review3_name": "Meliss",
         "review3_text": "Stayed during New Year; the room was very clean and comfortable. The view is enchanting and location is central.",
         "review4_name": "Serpil Pinarbas",
-        "review4_text": "Room quality and service are very good. Service quality has significantly increased. Definitely recommended."
+        "review4_text": "Room quality and service are very good. Service quality has significantly increased. Definitely recommended.",
+        "booking_checkin": "Check-in Date",
+        "booking_checkout": "Check-out Date",
+        "booking_rooms": "Rooms",
+        "booking_adults": "Total Adults",
+        "booking_children": "Total Children (0-12 years)",
+        "btn_search": "Search",
+        "room_count_1": "1 Room",
+        "room_count_3": "3 Rooms"
     } };

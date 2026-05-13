@@ -194,15 +194,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.appendChild(nav);
             }
         }
-        
+
         initBottomNav();
-        
+
         // FAQ Accordion Logic
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const item = question.parentElement;
                 item.classList.toggle('active');
-                
+
                 document.querySelectorAll('.faq-item').forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update translations for any remaining data-i18n elements
     function updateContent(lang) {
         if (!translations[lang]) return;
-        
+
         const data = translations[lang];
 
         document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.dynamic-email, [href^="mailto:"]').forEach(el => {
                 // Skip if inside footer credits
                 if (el.closest('.footer-credits')) return;
-                
+
                 if (el.tagName === 'A') {
                     el.href = `mailto:${email}`;
                 }
@@ -391,21 +391,21 @@ document.addEventListener('DOMContentLoaded', () => {
         // Security Feature: HTML Sanitizer
         function escapeHTML(str) {
             if (!str) return '';
-            return String(str).replace(/[&<>'"]/g, 
+            return String(str).replace(/[&<>'"]/g,
                 tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
             );
         }
 
         function renderModal(room, roomId) {
             const lang = document.documentElement.lang || 'tr';
-            const isSubfolder = window.location.pathname.includes('/tr/') || 
-                              window.location.pathname.includes('/en/') || 
-                              window.location.pathname.includes('/ka/') || 
-                              window.location.pathname.includes('/ru/');
-            
+            const isSubfolder = window.location.pathname.includes('/tr/') ||
+                window.location.pathname.includes('/en/') ||
+                window.location.pathname.includes('/ka/') ||
+                window.location.pathname.includes('/ru/');
+
             currentPathPrefix = isSubfolder ? '../' : '';
             const mainImgPath = `${currentPathPrefix}assets/${escapeHTML(room.folder)}/${escapeHTML(room.mainImage)}`;
-            
+
             const titleKey = `room_${roomId}`;
             const title = translations[lang][titleKey] || room.folder;
             const descKey = `room_${roomId}_desc`;
@@ -448,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const nextBtn = modalBody.querySelector('.modal-next');
             const prevBtn = modalBody.querySelector('.modal-prev');
             const closePopBtn = modalBody.querySelector('.close-modal-btn');
-            
+
             if (nextBtn) nextBtn.onclick = () => navigateGallery(1);
             if (prevBtn) prevBtn.onclick = () => navigateGallery(-1);
             if (closePopBtn) {
@@ -469,7 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        window.updateMainImage = function(src) {
+        window.updateMainImage = function (src) {
             const mainImg = document.getElementById('modal-main-img');
             if (mainImg) mainImg.src = src;
         };
@@ -515,7 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 roomSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             }
         });
-        
+
         roomPrevBtn.addEventListener('click', () => {
             if (roomSlider.scrollLeft <= 10) {
                 roomSlider.scrollTo({ left: maxScroll, behavior: 'smooth' });
@@ -544,4 +544,78 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Sliders
     initSlider('.hero-slider', 10000); // 10s for hero
     initSlider('.welcome-slider', 5000);  // 5s for welcome section
+
+    // Booking Form Logic
+    const bookingForm = document.getElementById('booking-form');
+    if (bookingForm) {
+        const checkinInput = document.getElementById('checkin');
+        const checkoutInput = document.getElementById('checkout');
+
+        // Set default dates (today and tomorrow)
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+
+        const formatDate = (date) => {
+            return date.toISOString().split('T')[0];
+        };
+
+        if (checkinInput && !checkinInput.value) {
+            checkinInput.value = formatDate(today);
+            checkinInput.min = formatDate(today);
+        }
+        if (checkoutInput && !checkoutInput.value) {
+            checkoutInput.value = formatDate(tomorrow);
+            checkoutInput.min = formatDate(tomorrow);
+        }
+
+        // Update checkout min date when checkin changes
+        if (checkinInput && checkoutInput) {
+            checkinInput.addEventListener('change', () => {
+                const minCheckout = new Date(checkinInput.value);
+                minCheckout.setDate(minCheckout.getDate() + 1);
+                checkoutInput.min = formatDate(minCheckout);
+                if (new Date(checkoutInput.value) <= new Date(checkinInput.value)) {
+                    checkoutInput.value = formatDate(minCheckout);
+                }
+            });
+        }
+
+        const formatReselivaDate = (dateStr) => {
+            if (!dateStr) return '';
+            const [y, m, d] = dateStr.split('-');
+            return `${d}/${m}/${y}`;
+        };
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const checkin = checkinInput ? checkinInput.value : '';
+            const checkout = checkoutInput ? checkoutInput.value : '';
+            const roomsEl = document.getElementById('rooms');
+            const adultsEl = document.getElementById('adults');
+            const childrenEl = document.getElementById('children');
+
+            const rooms = roomsEl ? roomsEl.value : '1';
+            const adults = adultsEl ? adultsEl.value : '2';
+            const children = childrenEl ? childrenEl.value : '0';
+
+            // Reseliva Redirect URL
+            const hotelId = "Sky-Tower";
+            let lang = document.documentElement.lang || 'tr';
+
+            // Force English for Georgian page as requested
+            if (lang === 'ka') {
+                lang = 'en';
+            }
+
+            const reselivaCheckin = formatReselivaDate(checkin);
+            const reselivaCheckout = formatReselivaDate(checkout);
+
+            // Correct Reseliva Parameters: pCheckInDate, pCheckOutDate (DD/MM/YYYY), numAdults, numChildren, numRooms
+            // Using /booknow/ instead of /hotel/ to trigger search results immediately
+            const reselivaUrl = `https://www.reseliva.com/booknow/${hotelId}/?lang=${lang}&pCheckInDate=${reselivaCheckin}&pCheckOutDate=${reselivaCheckout}&numAdults=${adults}&numChildren=${children}&numRooms=${rooms}`;
+
+            window.open(reselivaUrl, '_blank');
+        });
+    }
 });

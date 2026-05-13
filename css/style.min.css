@@ -2125,3 +2125,114 @@ footer {
 
 .mt-20 { margin-top: 20px; }
 .mt-30 { margin-top: 30px; }
+
+/* ==========================================================================
+   Booking Bar Section Styles
+   ========================================================================== */
+.booking-section {
+    background: #fff; /* White background for the section itself */
+    padding: 30px 0;
+    position: relative;
+    z-index: 10;
+    margin-top: 0; /* Remove overlap */
+}
+
+.booking-bar {
+    background: #ebebeb; /* Exact grey from reference */
+    padding: 25px 35px;
+    border-radius: 2px;
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.booking-group {
+    flex: 1;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.booking-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    font-family: 'Inter', sans-serif;
+}
+
+.booking-group input,
+.booking-group select {
+    width: 100%;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+    height: 48px;
+    line-height: 48px;
+    transition: border-color 0.2s;
+}
+
+.booking-group input:focus,
+.booking-group select:focus {
+    outline: none;
+    border-color: #b8962e;
+}
+
+.btn-search {
+    background: #c59d1f; /* Solid gold from reference */
+    color: #fff;
+    border: none;
+    padding: 0 45px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 48px;
+    min-width: 150px;
+}
+
+.btn-search:hover {
+    background: #a6841a;
+}
+
+@media (max-width: 1200px) {
+    .booking-bar {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .booking-section {
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+    .booking-bar {
+        gap: 20px;
+    }
+    .booking-group {
+        flex: 1 1 calc(50% - 10px);
+    }
+    .btn-search {
+        flex: 1 1 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .booking-group {
+        flex: 1 1 100%;
+    }
+}
+

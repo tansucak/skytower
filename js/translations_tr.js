@@ -176,5 +176,13 @@ const translations = { "tr": {
         "review3_name": "Melişş",
         "review3_text": "Yılbaşında konakladık; oda gayet temiz ve konforluydu. Manzarası zaten büyüleyici. Konumu tam merkezde.",
         "review4_name": "Serpil Pınarbaş",
-        "review4_text": "Oda kalitesi ve hizmet çok iyi. Yeni yönetimle birlikte hizmet kalitesi gerçekten artmış. Kesinlikle tavsiye ederim."
+        "review4_text": "Oda kalitesi ve hizmet çok iyi. Yeni yönetimle birlikte hizmet kalitesi gerçekten artmış. Kesinlikle tavsiye ederim.",
+        "booking_checkin": "Giriş Tarihi",
+        "booking_checkout": "Çıkış Tarihi",
+        "booking_rooms": "Oda Sayısı",
+        "booking_adults": "Toplam Yetişkin",
+        "booking_children": "Toplam Çocuk (0-12 yaş)",
+        "btn_search": "Ara",
+        "room_count_1": "1 Oda",
+        "room_count_3": "3 Oda"
     } };
