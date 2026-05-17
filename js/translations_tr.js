@@ -16,7 +16,7 @@ const translations = { "tr": {
         "trust_payment": "Güvenli Ödeme",
         "trust_confirm": "Hızlı Rezervasyon Onayı",
         "trust_price": "En İyi Fiyat Garantisi",
-        "phone_number": "+995 555 70 94 53",
+        "phone_number": "+90 542 520 59 50",
         "email": "skytowerhotelbatum@gmail.com",
         "whatsapp_number": "+995 555 70 94 53",
         "whatsapp_text": "WhatsApp'tan Yazın",
